@@ -1,0 +1,21 @@
+
+$mobile: new-breakpoint(min-width 480px);
+$tablet: new-breakpoint(min-width 768px);
+$desktop: new-breakpoint(min-width 992px);
+
+.container {
+  @include outer-container;
+}
+
+header.site-header .header-wrapper {
+
+}
+
+header.site-header .site-branding{
+    @include span-columns(4);
+}
+
+header.site-header nav.main-navigation {
+    @include span-columns(8);
+    clear:none;
+}
