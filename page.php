@@ -12,24 +12,28 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); ?>
+<?php $featured = $featured[0]; ?>
+
+<div class="featured page" style="background-image:url(<?php echo $featured ?>);">
+    <div class="pattern"></div>
+    <div class="content">
+         <div class="container">
+            <h1>Nuestros cursos Premium</h1>
+            <p>en video, de una forma fácil, paso a paso y <br/>creando proyectos del <span>mundo real</span></p>
+        </div>
+    </div>
+</div>
+
+	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

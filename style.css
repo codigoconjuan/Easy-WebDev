@@ -45,6 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+@import "http://fonts.googleapis.com/css?family=Raleway:400,800";
 /* line 1, sass/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -964,6 +965,78 @@ html {
   box-sizing: inherit;
 }
 
+/* line 4, sass/neat/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, sass/neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+body:before {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0.5em 0.75em;
+  font-family: monospace;
+  font-size: 1.125em;
+  line-height: 1;
+  color: #20D832;
+  background: rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 30em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(30em)";
+  }
+}
+@media screen and (min-width: 35em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(35em)";
+  }
+}
+@media screen and (min-width: 40em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(40em)";
+  }
+}
+@media screen and (min-width: 45em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(45em)";
+  }
+}
+@media screen and (min-width: 50em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(50em)";
+  }
+}
+@media screen and (min-width: 55em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(55em)";
+  }
+}
+@media screen and (min-width: 60em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(60em)";
+  }
+}
+@media screen and (min-width: 65em) {
+  /* line 27, sass/omega-reset/mixins/_media-query-helper.scss */
+  body:before {
+    content: "@include media(65em)";
+  }
+}
+
 /*--------------------------------------------------------------
 # Bitters / Base
 --------------------------------------------------------------*/
@@ -1221,9 +1294,10 @@ picture {
 /*--------------------------------------------------------------
 # EasyWebDev
 --------------------------------------------------------------*/
-/* line 6, sass/_easy-webdev.scss */
+/** Colors **/
+/* line 16, sass/_easy-webdev.scss */
 .container {
-  max-width: 68em;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1234,27 +1308,978 @@ picture {
   display: table;
 }
 
-/* line 14, sass/_easy-webdev.scss */
-header.site-header .site-branding {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-}
-/* line 89, sass/neat/grid/_span-columns.scss */
-header.site-header .site-branding:last-child {
-  margin-right: 0;
+/* line 23, sass/_easy-webdev.scss */
+h1, h2, h3, span#typed {
+  font-family: "Raleway", arial, helvetica, sans-serif;
+  font-weight: 800;
 }
 
-/* line 18, sass/_easy-webdev.scss */
-header.site-header nav.main-navigation {
+/* line 27, sass/_easy-webdev.scss */
+h2 {
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+
+/* line 35, sass/_easy-webdev.scss */
+h2:after {
+  height: 6px;
+  width: 40px;
+  margin: 10px auto 0;
+  display: block;
+  content: " ";
+  background-color: #d2270b;
+}
+
+/* line 20, sass/bourbon/addons/_clearfix.scss */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 46, sass/_easy-webdev.scss */
+  header.site-header .header-wrapper {
+    padding: 20px 0 0 0;
+  }
+}
+/* line 51, sass/_easy-webdev.scss */
+header.site-header .header-wrapper .site-branding {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  clear: none;
+  width: 100%;
 }
 /* line 89, sass/neat/grid/_span-columns.scss */
-header.site-header nav.main-navigation:last-child {
+header.site-header .header-wrapper .site-branding:last-child {
   margin-right: 0;
 }
+/* line 53, sass/_easy-webdev.scss */
+header.site-header .header-wrapper .site-branding img {
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  /* line 51, sass/_easy-webdev.scss */
+  header.site-header .header-wrapper .site-branding {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  header.site-header .header-wrapper .site-branding:last-child {
+    margin-right: 0;
+  }
+}
+/* line 62, sass/_easy-webdev.scss */
+header.site-header .header-wrapper .social-navigation {
+  padding: 20px 0 0 0;
+  clear: both;
+}
+/* line 66, sass/_easy-webdev.scss */
+header.site-header .header-wrapper .social-navigation ul li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%;
+}
+/* line 89, sass/neat/grid/_span-columns.scss */
+header.site-header .header-wrapper .social-navigation ul li:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 66, sass/_easy-webdev.scss */
+  header.site-header .header-wrapper .social-navigation ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  header.site-header .header-wrapper .social-navigation ul li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 62, sass/_easy-webdev.scss */
+  header.site-header .header-wrapper .social-navigation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-left: 8.5298%;
+    margin-right: 0;
+    clear: none;
+    padding: 35px 0 0 0;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  header.site-header .header-wrapper .social-navigation:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 84, sass/_easy-webdev.scss */
+header.site-header nav.main-navigation {
+  clear: none;
+}
+/* line 86, sass/_easy-webdev.scss */
+header.site-header nav.main-navigation ul {
+  display: block;
+}
+/* line 89, sass/_easy-webdev.scss */
+header.site-header nav.main-navigation ul li {
+  width: 100%;
+  text-align: center;
+}
+/* line 92, sass/_easy-webdev.scss */
+header.site-header nav.main-navigation ul li a {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  /* line 84, sass/_easy-webdev.scss */
+  header.site-header nav.main-navigation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  header.site-header nav.main-navigation:last-child {
+    margin-right: 0;
+  }
+  /* line 99, sass/_easy-webdev.scss */
+  header.site-header nav.main-navigation ul {
+    margin-top: 40px;
+  }
+  /* line 101, sass/_easy-webdev.scss */
+  header.site-header nav.main-navigation ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  header.site-header nav.main-navigation ul li:last-child {
+    margin-right: 0;
+  }
+  /* line 103, sass/_easy-webdev.scss */
+  header.site-header nav.main-navigation ul li a {
+    color: #ffffff;
+    font-weight: bold;
+  }
+}
+
+/* line 114, sass/_easy-webdev.scss */
+header .header-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 121, sass/_easy-webdev.scss */
+div.featured, div.featured.page, .single-cursos div.featured {
+  position: relative;
+  height: 600px;
+  width: auto;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media screen and (min-width: 992px) {
+  /* line 121, sass/_easy-webdev.scss */
+  div.featured, div.featured.page, .single-cursos div.featured {
+    height: 800px;
+    width: auto;
+  }
+}
+/* line 130, sass/_easy-webdev.scss */
+div.featured div.pattern {
+  background-image: url(img/bgpattern.png);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 135, sass/_easy-webdev.scss */
+div.featured .content {
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: 40%;
+  left: 0;
+}
+@media screen and (min-width: 992px) {
+  /* line 135, sass/_easy-webdev.scss */
+  div.featured .content {
+    position: relative;
+    top: 30%;
+    left: 0;
+  }
+}
+/* line 145, sass/_easy-webdev.scss */
+div.featured .content .container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, sass/bourbon/addons/_clearfix.scss */
+div.featured .content .container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 147, sass/_easy-webdev.scss */
+div.featured .content .container p {
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0;
+}
+@media screen and (min-width: 992px) {
+  /* line 147, sass/_easy-webdev.scss */
+  div.featured .content .container p {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+/* line 158, sass/_easy-webdev.scss */
+div.featured .content .container p span {
+  font-size: 20px;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #d2270b;
+  text-transform: none;
+}
+@media screen and (min-width: 992px) {
+  /* line 158, sass/_easy-webdev.scss */
+  div.featured .content .container p span {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+/* line 169, sass/_easy-webdev.scss */
+div.featured .content .container span {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+@media screen and (min-width: 992px) {
+  /* line 169, sass/_easy-webdev.scss */
+  div.featured .content .container span {
+    font-size: 60px;
+    font-size: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* line 184, sass/_easy-webdev.scss */
+  div.featured.page, .single-cursos div.featured {
+    height: 400px;
+  }
+}
+/* line 189, sass/_easy-webdev.scss */
+div.featured.page h1, .single-cursos div.featured h1 {
+  font-size: 38px;
+  font-size: 2.375rem;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 197, sass/_easy-webdev.scss */
+div.featured.page p, .single-cursos div.featured p {
+  text-align: center;
+}
+
+/* code for animated blinking cursor */
+/* line 203, sass/_easy-webdev.scss */
+.typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 226, sass/_easy-webdev.scss */
+#social-menu li a {
+  font-size: 0;
+}
+/* line 229, sass/_easy-webdev.scss */
+#social-menu li a:before {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-family: 'Fontawesome';
+  font-size: 25px;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  content: '\f08e';
+  height: 37px;
+  width: 37px;
+  font-weight: normal;
+  border-radius: 5px;
+  text-align: center;
+}
+/* line 244, sass/_easy-webdev.scss */
+#social-menu li a[href*="facebook.com"]::before {
+  content: '\f09a';
+}
+/* line 246, sass/_easy-webdev.scss */
+#social-menu li a[href*="instagram.com"]::before {
+  content: '\f16d';
+}
+/* line 248, sass/_easy-webdev.scss */
+#social-menu li a[href*="youtube.com"]::before {
+  content: '\f167';
+}
+/* line 250, sass/_easy-webdev.scss */
+#social-menu li a[href*="twitter.com"]::before {
+  content: '\f099';
+}
+
+/* line 254, sass/_easy-webdev.scss */
+section#tecnologias {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 30px auto;
+}
+/* line 20, sass/bourbon/addons/_clearfix.scss */
+section#tecnologias::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 257, sass/_easy-webdev.scss */
+section#tecnologias li {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  /* line 257, sass/_easy-webdev.scss */
+  section#tecnologias li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  section#tecnologias li:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 265, sass/_easy-webdev.scss */
+div.skills {
+  padding: 30px 0 0 0;
+  height: 300px;
+  width: auto;
+  position: relative;
+  background-image: url(img/parallax-skills.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  /* line 265, sass/_easy-webdev.scss */
+  div.skills {
+    height: 400px;
+    width: auto;
+    padding: 80px 50px 0 50px;
+  }
+}
+/* line 278, sass/_easy-webdev.scss */
+div.skills:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: " ";
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.7) 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.7) 100%);
+}
+/* line 288, sass/_easy-webdev.scss */
+div.skills .container {
+  position: relative;
+  z-index: 100;
+}
+/* line 294, sass/_easy-webdev.scss */
+div.skills h2 {
+  color: #ffffff;
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  /* line 294, sass/_easy-webdev.scss */
+  div.skills h2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  div.skills h2:last-child {
+    margin-right: 0;
+  }
+}
+/* line 305, sass/_easy-webdev.scss */
+div.skills h2:after {
+  display: none;
+}
+/* line 308, sass/_easy-webdev.scss */
+div.skills h2 span {
+  border-bottom: 2px solid #d2270b;
+  font-weight: bold;
+}
+
+/* line 314, sass/_easy-webdev.scss */
+.button, section.platform div.view-courses a,
+.button:active,
+section.platform div.view-courses a:active,
+.button:visited,
+section.platform div.view-courses a:visited {
+  border: 1px solid #076fe4;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #8ebcf1;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #4294f0;
+  background-image: -webkit-linear-gradient(#4294f0, #0776f3);
+  background-image: linear-gradient(#4294f0, #0776f3);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #0065d6;
+  background-clip: padding-box;
+  color: #ffffff;
+  border: none;
+  box-shadow: none !important;
+  background-image: linear-gradient(#58b854 0, #58b854 100%) !important;
+  clear: both;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+/* line 137, sass/bourbon/_bourbon-deprecated-upcoming.scss */
+.button:hover:not(:disabled), section.platform div.view-courses a:hover:not(:disabled),
+.button:active:hover:not(:disabled),
+section.platform div.view-courses a:active:hover:not(:disabled),
+.button:visited:hover:not(:disabled),
+section.platform div.view-courses a:visited:hover:not(:disabled) {
+  background-color: #2f87ea;
+  background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
+  background-image: linear-gradient(#2f87ea, #086fe3);
+  box-shadow: inset 0 1px 0 0 #60a2ec;
+  cursor: pointer;
+}
+/* line 154, sass/bourbon/_bourbon-deprecated-upcoming.scss */
+.button:active:not(:disabled), section.platform div.view-courses a:active:not(:disabled), .button:focus:not(:disabled), section.platform div.view-courses a:focus:not(:disabled),
+.button:active:active:not(:disabled),
+section.platform div.view-courses a:active:active:not(:disabled),
+.button:active:focus:not(:disabled),
+section.platform div.view-courses a:active:focus:not(:disabled),
+.button:visited:active:not(:disabled),
+section.platform div.view-courses a:visited:active:not(:disabled),
+.button:visited:focus:not(:disabled),
+section.platform div.view-courses a:visited:focus:not(:disabled) {
+  border: 1px solid #076fe4;
+  box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3;
+}
+/* line 59, sass/bourbon/_bourbon-deprecated-upcoming.scss */
+.button:disabled, section.platform div.view-courses a:disabled,
+.button:active:disabled,
+section.platform div.view-courses a:active:disabled,
+.button:visited:disabled,
+section.platform div.view-courses a:visited:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 328, sass/_easy-webdev.scss */
+section.cursos,
+section.blog,
+section.platform,
+div#primary {
+  padding: 40px;
+}
+
+/* line 334, sass/_easy-webdev.scss */
+section.blog {
+  background-color: #ededed;
+}
+
+/* line 339, sass/_easy-webdev.scss */
+ul.list li {
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.28);
+}
+@media screen and (min-width: 768px) {
+  /* line 339, sass/_easy-webdev.scss */
+  ul.list li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  ul.list li:last-child {
+    margin-right: 0;
+  }
+  /* line 78, sass/neat/grid/_omega.scss */
+  ul.list li:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, sass/neat/grid/_omega.scss */
+  ul.list li:nth-child(3n+1) {
+    clear: left;
+  }
+}
+/* line 350, sass/_easy-webdev.scss */
+ul.list li a {
+  color: #000000 !important;
+}
+/* line 353, sass/_easy-webdev.scss */
+ul.list li div.content {
+  padding: 20px;
+}
+/* line 20, sass/bourbon/addons/_clearfix.scss */
+ul.list li div.content::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 356, sass/_easy-webdev.scss */
+ul.list li div.content p {
+  margin: 0;
+}
+/* line 359, sass/_easy-webdev.scss */
+ul.list li div.content p.autor {
+  float: left;
+  width: 50%;
+}
+/* line 363, sass/_easy-webdev.scss */
+ul.list li div.content p.fecha {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 374, sass/_easy-webdev.scss */
+  section.platform div.image-platform {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  section.platform div.image-platform:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 381, sass/_easy-webdev.scss */
+  section.platform div.platform-description {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-right: 0;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  section.platform div.platform-description:last-child {
+    margin-right: 0;
+  }
+}
+/* line 387, sass/_easy-webdev.scss */
+section.platform div.platform-description p {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+/* line 393, sass/_easy-webdev.scss */
+section.platform div.view-courses {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+/* line 89, sass/neat/grid/_span-columns.scss */
+section.platform div.view-courses:last-child {
+  margin-right: 0;
+}
+/* line 20, sass/bourbon/addons/_clearfix.scss */
+section.platform div.view-courses::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 398, sass/_easy-webdev.scss */
+section.platform div.view-courses a {
+  text-transform: none;
+  text-shadow: none;
+  background-image: linear-gradient(#c3240a 0, #d2270b 100%) !important;
+}
+
+/* line 408, sass/_easy-webdev.scss */
+footer.site-footer {
+  background-color: #10769e;
+  padding: 30px 0 0 0;
+}
+/* line 411, sass/_easy-webdev.scss */
+footer.site-footer div.course-list,
+footer.site-footer div.blog-list {
+  margin: 0 0 20px;
+  padding: 0 0 0 40px;
+}
+@media screen and (min-width: 768px) {
+  /* line 411, sass/_easy-webdev.scss */
+  footer.site-footer div.course-list,
+  footer.site-footer div.blog-list {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  footer.site-footer div.course-list:last-child,
+  footer.site-footer div.blog-list:last-child {
+    margin-right: 0;
+  }
+}
+/* line 420, sass/_easy-webdev.scss */
+footer.site-footer div.course-list h3,
+footer.site-footer div.blog-list h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+/* line 425, sass/_easy-webdev.scss */
+footer.site-footer div.course-list ul li,
+footer.site-footer div.blog-list ul li {
+  padding: 0 0 0 20px;
+  margin: 0 0 10px;
+}
+/* line 428, sass/_easy-webdev.scss */
+footer.site-footer div.course-list ul li a,
+footer.site-footer div.blog-list ul li a {
+  color: #ffffff;
+}
+/* line 434, sass/_easy-webdev.scss */
+footer.site-footer .site-info {
+  background-color: #0c5a79;
+  padding: 10px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+/* line 440, sass/_easy-webdev.scss */
+footer.site-footer .site-info p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* line 452, sass/_easy-webdev.scss */
+.single-cursos div.featured {
+  height: 600px;
+  width: auto;
+  position: relative;
+}
+/* line 456, sass/_easy-webdev.scss */
+.single-cursos div.featured .content {
+  top: 180px;
+}
+@media screen and (min-width: 768px) {
+  /* line 456, sass/_easy-webdev.scss */
+  .single-cursos div.featured .content {
+    top: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 462, sass/_easy-webdev.scss */
+  .single-cursos div.featured .course-title {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .single-cursos div.featured .course-title:last-child {
+    margin-right: 0;
+  }
+}
+/* line 467, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-title h1 {
+  font-size: 38px;
+  font-size: 2.375rem;
+  text-transform: none;
+}
+@media screen and (min-width: 768px) {
+  /* line 467, sass/_easy-webdev.scss */
+  .single-cursos div.featured .course-title h1 {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 476, sass/_easy-webdev.scss */
+  .single-cursos div.featured .course-description {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .single-cursos div.featured .course-description:last-child {
+    margin-right: 0;
+  }
+}
+/* line 480, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* line 487, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description div.price {
+  background-color: #10769e;
+  display: none;
+  position: relative;
+  padding: 10px 10px 30px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  /* line 487, sass/_easy-webdev.scss */
+  .single-cursos div.featured .course-description div.price {
+    display: block;
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 48.21067%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .single-cursos div.featured .course-description div.price:last-child {
+    margin-right: 0;
+  }
+}
+/* line 498, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description div.price p {
+  font-weight: bold;
+}
+/* line 501, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description div.price span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  height: 90px;
+  width: 90px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: #f45035;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-align: center;
+  line-height: 90px;
+  font-family: "Raleway", arial, helvetica, sans-serif;
+}
+/* line 515, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description div.price.special-price {
+  margin-right: 0;
+}
+/* line 521, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description .suscribe-course {
+  background-color: #58b854;
+  display: none;
+  margin: 60px auto 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  /* line 521, sass/_easy-webdev.scss */
+  .single-cursos div.featured .course-description .suscribe-course {
+    display: block;
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 48.21067%;
+    margin-left: 25.89467%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .single-cursos div.featured .course-description .suscribe-course:last-child {
+    margin-right: 0;
+  }
+}
+/* line 532, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description .suscribe-course a {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Raleway", arial, helvetica, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  text-shadow: none;
+  background: #58b854;
+}
+/* line 542, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description .suscribe-course a:hover {
+  color: #ffffff;
+  background: #439940 !important;
+}
+/* line 550, sass/_easy-webdev.scss */
+.single-cursos div.featured:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: " ";
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
+}
+/* line 560, sass/_easy-webdev.scss */
+.single-cursos div.featured .container {
+  position: relative;
+  z-index: 100;
+}
+
+/* line 568, sass/_easy-webdev.scss */
+.course-features {
+  background-color: #10769e;
+}
+/* line 570, sass/_easy-webdev.scss */
+.course-features ul {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 89, sass/neat/grid/_span-columns.scss */
+.course-features ul:last-child {
+  margin-right: 0;
+}
+/* line 572, sass/_easy-webdev.scss */
+.course-features ul li {
+  padding: 30px;
+  padding: 30x;
+  color: #ffffff;
+  text-align: center;
+}
+@media screen and (min-width: mobile) {
+  /* line 572, sass/_easy-webdev.scss */
+  .course-features ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .course-features ul li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 572, sass/_easy-webdev.scss */
+  .course-features ul li {
+    display: table-cell;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 572, sass/_easy-webdev.scss */
+  .course-features ul li {
+    display: table-cell;
+    width: 16.66667%;
+  }
+}
+/* line 589, sass/_easy-webdev.scss */
+.course-features ul li i {
+  font-size: 50px;
+  font-size: 3.125rem;
+  margin: 0 0 20px;
+}
+/* line 594, sass/_easy-webdev.scss */
+.course-features ul li p {
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Raleway
+--------------------------------------------------------------*/

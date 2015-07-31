@@ -115,7 +115,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Neat
 --------------------------------------------------------------*/
 @import "neat/neat";
-
+@import "omega-reset/style";
 /*--------------------------------------------------------------
 # Bitters / Base
 --------------------------------------------------------------*/
@@ -125,3 +125,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # EasyWebDev
 --------------------------------------------------------------*/
 @import "easy-webdev";
+
+/*--------------------------------------------------------------
+# Raleway
+--------------------------------------------------------------*/
+@import "http://fonts.googleapis.com/css?family=Raleway:400,800";

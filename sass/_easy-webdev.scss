@@ -3,19 +3,597 @@ $mobile: new-breakpoint(min-width 480px);
 $tablet: new-breakpoint(min-width 768px);
 $desktop: new-breakpoint(min-width 992px);
 
+$max-width: em(1300) !default;
+/** Colors **/
+
+$white : #ffffff;
+$orange : #d2270b;
+$black : #000000;
+$snow : #ededed;
+$green : #58b854;
+$blue: #10769e;
+
 .container {
-  @include outer-container;
+  @include outer-container(1200px);
 }
 
+$fuente : 'Raleway', arial, helvetica, sans-serif;
+
+
+h1,h2,h3, span#typed {
+  font-family: $fuente;
+  font-weight:800;
+}
+h2 {
+
+  font-weight:bold;
+  color:$black;
+  text-align:center;
+  font-size: 28px;
+  font-size: rem(28);
+}
+h2:after {
+  @include size(40px 6px);
+  @include margin(10px auto 0 auto);
+  display:block;
+  content: " ";
+  background-color: $orange;
+}
+
+.clearfix {
+  @include clearfix;
+}
 header.site-header .header-wrapper {
+    @include media($tablet) {
+      @include pad(20px 0 0 0);
+    }
 
+    .site-branding {
+        @include span-columns(12);
+        img {
+          margin: 0 auto;
+          display:block;
+        }
+        @include media($tablet) {
+             @include span-columns(4);
+        }
+     } //.site-branding
+
+    .social-navigation {
+      @include pad(20px 0 0 0 );
+      clear:both;
+      ul {
+        li {
+          @include span-columns(1);
+          @include media($tablet) {
+             @include span-columns(3);
+          }
+        }
+      }
+      @include media($tablet) {
+          @include span-columns(2);
+          @include shift(1);
+          @include omega();
+          clear:none;
+          @include pad(35px 0 0 0 );
+      }
+    }
 }
 
-header.site-header .site-branding{
-    @include span-columns(4);
-}
 
 header.site-header nav.main-navigation {
-    @include span-columns(8);
     clear:none;
+    ul {
+        display:block;
+
+        li {
+          @include fill-parent;
+          text-align:center;
+          a {
+            color:$white;
+          }
+        }
+    }
+    @include media($tablet) {
+      @include span-columns(5);
+          ul {
+            @include margin(40px null null null);
+            li {
+              @include span-columns(4 of 12);
+              a {
+                color: $white;
+                font-weight:bold;
+              }
+            }
+        }
+    } // fin tablet
+}
+
+
+header {
+  .header-wrapper {
+    @include position(absolute, 0 null null 0);
+    @include size(100% auto);
+    z-index:10;
+  }
+}
+
+div.featured {
+  position:relative;
+  @include size(auto 600px);
+
+  @include media($desktop) {
+    @include size(auto 800px);
+  }
+  background-size: cover;
+  background-attachment: fixed;
+  div.pattern {
+    background-image:url(img/bgpattern.png);
+    @include size(100% 100%);
+    @include position(absolute, 0 null null 0);
+  }
+  .content {
+    @include size(100% auto);
+    position:relative;
+    top:40%;
+    left: 0;
+    @include media($desktop) {
+      position:relative;
+      top:30%;
+      left: 0;
+    }
+    .container {
+      @include outer-container;
+      p {
+          font-weight:normal;
+          font-size: 20px;
+          font-size: rem(20);
+          color:$white;
+          margin:0;
+          @include media($desktop) {
+            font-size: 24px;
+            font-size: rem(24);
+          }
+
+          span {
+            font-size: 20px;
+            font-size: rem(20);
+            border-bottom: 2px solid $orange;
+            text-transform:none;
+            @include media($desktop) {
+              font-size: 24px;
+              font-size: rem(24);
+            }
+          }
+      }
+        span {
+          color:$white;
+          font-weight:bold;
+          text-transform:uppercase;
+          font-size: 30px;
+          font-size: rem(30);
+          @include media($desktop) {
+            font-size: 60px;
+            font-size: rem(60);
+          }
+        }
+    }
+  }
+}
+
+div.featured.page{
+  @extend .featured;
+  @include media($desktop) {
+      height:400px;
+  }
+  h1 {
+    font-size: 38px;
+    font-size: rem(38);
+    color:$white;
+    text-align:center;
+    text-transform:uppercase;
+  }
+
+  p {
+    text-align:center;
+  }
+}
+
+/* code for animated blinking cursor */
+.typed-cursor{
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@include keyframes(blink) {
+  0% {
+    opacity:0
+  }
+  50% {
+    opacity:1
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+#social-menu li {
+  a {
+    font-size: 0;
+  }
+    a:before {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 5px;
+      font-family: 'Fontawesome';
+      font-size: 25px;
+      color: $white;
+      -webkit-font-smoothing: antialiased;
+      content: '\f08e';
+  		height:37px;
+  		width:37px;
+  		font-weight:normal;
+  		border-radius:5px;
+  		text-align:center;
+  	}
+  	a[href*="facebook.com"]::before { content: '\f09a';}
+
+    a[href*="instagram.com"]::before { content: '\f16d';}
+
+    a[href*="youtube.com"]::before { content: '\f167';}
+
+    a[href*="twitter.com"]::before { content: '\f099';}
+}
+
+
+section#tecnologias {
+  @include outer-container;
+  @include margin(30px auto );
+  li {
+    text-align:center;
+    @include media($tablet) {
+        @include span-columns(4);
+    }
+  }
+}
+
+div.skills {
+  @include pad(30px 0 0 0);
+  @include size(auto 300px);
+  position: relative;
+  background-image: url(img/parallax-skills.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align:center;
+  @include media($desktop) {
+      @include size(auto 400px);
+      @include pad(80px 50px 0 50px);
+  }
+
+  &:after {
+    position: absolute;
+    @include size(100% 100%);
+    content: " ";
+    display:block;
+    top:0;
+    left:0;
+    @include linear-gradient(rgba(0,0,0,.2) 30%, rgba(0,0,0,.7) 100%);;
+  }
+
+  .container {
+    position:relative;
+    z-index:100;
+  }
+
+
+  h2 {
+    color:$white;
+    font-size: 40px;
+    font-size: rem(40);
+    font-weight:normal;
+    @include media($desktop) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+
+    @include margin(null null 40px null);
+    &:after {
+      display:none;
+    }
+    span {
+      border-bottom:2px solid $orange;
+      font-weight:bold;
+    }
+  }
+}
+.button,
+.button:active,
+.button:visited {
+    @include button;
+    color:$white;
+    border:none;
+    box-shadow:none!important;
+    background-image:  linear-gradient($green 0, $green 100%)!important;
+    clear:both;
+    font-size: 24px;
+    font-size: rem(24);
+    text-transform:uppercase;
+}
+
+section.cursos,
+section.blog,
+section.platform,
+div#primary {
+  @include pad(40px null);
+}
+section.blog {
+  background-color:$snow;
+}
+
+ul.list {
+  li {
+    background-color:$white;
+    @include margin(null null 30px null);
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow:    0px 0px 19px 0px rgba(0, 0, 0, 0.28);
+    box-shadow:         0px 0px 19px 0px rgba(0, 0, 0, 0.28);
+
+    @include media($tablet) {
+          @include span-columns(4);
+          @include omega(3n);
+    }
+    a {
+      color:$black!important;
+    }
+    div.content {
+      @include clearfix;
+      @include pad(20px);
+      p {
+          @include margin(0);
+      }
+      p.autor {
+        float:left;
+        width:50%;
+      }
+      p.fecha {
+        float:right;
+        width:50%;
+        text-align:right;
+      }
+
+    }
+  }
+}
+
+section.platform {
+  div.image-platform {
+    @include media($tablet) {
+      @include span-columns(5);
+    }
+
+
+  }
+  div.platform-description {
+    @include media($tablet) {
+        @include span-columns(7);
+          @include omega();
+    }
+
+    p {
+      font-size: 24px;
+      font-size: rem(24);
+      line-height: 40px;
+    }
+  }
+  div.view-courses {
+    @include span-columns(12);
+    @include clearfix;
+    @include pad(30px null null null);
+    text-align:center;
+    a {
+        @extend .button;
+        text-transform:none;
+        text-shadow:none;
+        background-image:  linear-gradient(darken($orange,3% )  0 , $orange  100%)!important;
+    }
+  }
+}
+
+
+footer.site-footer {
+  background-color: $blue;
+  @include pad(30px 0 0 0);
+  div.course-list,
+  div.blog-list {
+        @include margin(0 0 20px 0);
+        @include pad(0 0 0 40px);
+        @include media($tablet) {
+            @include span-columns(6);
+            @include margin(0);
+            @include pad(0);
+        }
+        h3 {
+          text-transform:uppercase;
+          color:$white;
+          @include margin(0 0 20px 0);
+        }
+        ul li {
+          @include pad(0 0 0 20px);
+          @include margin(0 0 10px 0);
+          a {
+            color:$white;
+          }
+        }
+  }
+
+  .site-info {
+    background-color:darken($blue, 8%);
+    @include pad(10px 0);
+    @include margin(20px null null null);
+    text-align:center;
+
+    p {
+      font-size: 18px;
+      font-size: rem(18);
+      color:$white;
+      font-weight:bold;
+      @include margin(null null 0 null);
+    }
+
+  }
+}
+
+.single-cursos {
+  div.featured {
+    @extend div.featured.page;
+    @include size(auto 600px);
+    position:relative;
+    .content {
+      top: 180px;
+      @include media($tablet) {
+         top:150px;
+      }
+    }
+    .course-title {
+      @include media($tablet) {
+        @include span-columns(4);
+      }
+
+      h1 {
+        font-size: 38px;
+        font-size: rem(38);
+        text-transform:none;
+        @include media($tablet) {
+          @include margin(30px null null null);
+        }
+      }
+    }
+    .course-description {
+      @include media($tablet) {
+        @include span-columns(8);
+      }
+      p {
+        font-size: 18px;
+        font-size: rem(18);
+        @include margin(null null 20px null);
+        text-align:center;
+      }
+
+      div.price {
+          background-color:$blue;
+          display:none;
+          @include media($tablet) {
+            display:block;
+            @include span-columns(4 of 8);
+          }
+          position: relative;
+          @include pad(10px 10px 30px 10px);
+          @include border-top-radius(5px);
+          @include border-bottom-radius(5px);
+          p {
+            font-weight:bold;
+          }
+          span {
+              @include position(absolute, 50% 0 null 0);
+              @include margin(null auto);
+              @include size(90px 90px);
+              @include border-bottom-radius(50%);
+              @include border-top-radius(50%);
+              background-color: lighten($orange, 15%);
+              font-size: 30px;
+              font-size: rem(30);
+              text-align: center;
+              line-height: 90px;
+              font-family: $fuente;
+          }
+
+          &.special-price {
+            @include omega();
+          }
+
+
+      }
+      .suscribe-course {
+        background-color:$green;
+        display:none;
+        @include media($tablet) {
+            display:block;
+            @include span-columns(4 of 8);
+            @include shift(2);
+        }
+        @include margin(60px auto 0 auto);
+        @include border-top-radius(10px);
+        @include border-bottom-radius(10px);
+        a {
+          display:block;
+          @include margin(0 auto);
+          text-align:center;
+          font-family: $fuente;
+          font-size: 18px;
+          font-size: rem(18);
+  @include transition(all .3s ease-in);
+          text-shadow:none;
+          background:$green;
+          &:hover {
+            color:$white;
+
+            background:darken($green, 10%)!important;
+          }
+        }
+      }
+    }
+    &:after {
+      @include position(absolute, 0 0 null 0);
+      position: absolute;
+      @include size(100% 100%);
+      content: " ";
+      display:block;
+      top:0;
+      left:0;
+      @include linear-gradient(rgba(0,0,0,.1) 30%, rgba(0,0,0,.4) 100%);;
+    }
+    .container {
+      position:relative;
+      z-index:100;
+    }
+  }
+}
+
+
+.course-features {
+  background-color:$blue;
+  ul {
+    @include span-columns(12);
+    li {
+      @include pad(30px null);
+      @include media(mobile) {
+          @include span-columns(3 of 12);
+      }
+
+      @include media($tablet) {
+          @include reset-display;
+          @include span-columns(6 of 12, table);
+      }
+      @include media($desktop) {
+          @include span-columns(2, table);
+      }
+      @include pad(30x null);
+      color:$white;
+      text-align:center;
+
+      i {
+        font-size: 50px;
+        font-size: rem(50);
+        @include margin(0 0 20px 0);
+      }
+      p {
+        font-weight:bold;
+      }
+    }
+  }
 }

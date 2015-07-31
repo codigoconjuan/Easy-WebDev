@@ -23,18 +23,23 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'easy-webdev' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-			<div class="container">
-						<div class="site-branding">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-										<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
-								</a>
-						</div><!-- .site-branding -->
+			<div class="header-wrapper">
+						<div class="container">
+								<div class="site-branding">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+												<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
+										</a>
+								</div><!-- .site-branding -->
 
-						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'easy-webdev' ); ?></button>
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav><!-- #site-navigation -->
-			</div>
+								<nav id="site-navigation" class="main-navigation" role="navigation">
+									<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+								</nav><!-- #site-navigation -->
+
+								<nav id="social-navigation" class="social-navigation" role="navigation">
+									<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>
+								</nav><!-- #social-navigation -->
+					</div>
+			</div> <!--.header-wrapper-->
 	</header><!-- #masthead -->
 
 
