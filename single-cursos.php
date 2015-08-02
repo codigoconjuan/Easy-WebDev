@@ -105,6 +105,26 @@ get_header(); ?>
 			</div>
 	</div>
 
-			<?php printf( '<pre>%s</pre>', var_export( get_post_custom( get_the_ID() ), true ) ); ?>
+    <div class="bottom-single-course">
+        <h2>¿Qué Aprenderás en Este Curso?</h2>
+
+        <?php  $contenido = get_post_meta( get_the_ID(), '_cursos_listado_aprenderas', true ); ?>
+
+        <ul class="aprenderas">
+            <?php foreach($contenido as $c) { ?>
+                <li><?php echo $c ?></li>
+            <?php } ?>
+        </ul>
+
+    </div>
+
+    <div class="container">
+        <div class="suscribe-course-bottom clearfix">
+            <a href="<?php echo get_post_meta( get_the_ID(), '_cursos_enlace_curso', true ); ?>" class="button" target="_blank">Inscribirme a este curso</a>
+        </div>
+    </div>
+
+
+
 			<?php endwhile; // End of the loop. ?>
 <?php get_footer(); ?>

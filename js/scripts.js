@@ -18,4 +18,10 @@ jQuery(function($){
           remove: false
       });
 
+    $('div#course-features ul li').matchHeight({
+        byRow: true,
+        property: 'height',
+        remove: false
+    });
+
 });

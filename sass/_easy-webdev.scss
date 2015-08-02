@@ -263,16 +263,23 @@ section#tecnologias {
 }
 
 div.skills {
-  @include pad(30px 0 0 0);
-  @include size(auto 300px);
+  @include pad(80px 0 0 0);
+  @include size(auto 400px);
   position: relative;
   background-image: url(img/parallax-skills.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   text-align:center;
+
+  @include media($tablet) {
+    @include pad(90px 0 0 0);
+    @include size(auto 400px);
+  }
+
   @include media($desktop) {
-      @include size(auto 400px);
-      @include pad(80px 50px 0 50px);
+      background-size: cover;
+      background-attachment: fixed;
+      @include size(auto 300px);
+      @include pad(60px 50px 0 50px);
   }
 
   &:after {
@@ -293,9 +300,13 @@ div.skills {
 
   h2 {
     color:$white;
-    font-size: 40px;
-    font-size: rem(40);
+    font-size: 30px;
+    font-size: rem(30);
     font-weight:normal;
+    @include media ($tablet) {
+      font-size: 40px;
+      font-size: rem(40);
+    }
     @include media($desktop) {
       @include span-columns(8);
       @include shift(2);
@@ -320,8 +331,8 @@ div.skills {
     box-shadow:none!important;
     background-image:  linear-gradient($green 0, $green 100%)!important;
     clear:both;
-    font-size: 24px;
-    font-size: rem(24);
+    font-size: 20px;
+    font-size: rem(20);
     text-transform:uppercase;
 }
 
@@ -329,7 +340,11 @@ section.cursos,
 section.blog,
 section.platform,
 div#primary {
-  @include pad(40px null);
+  @include pad(40px 10px);
+  @include media($tablet) {
+    @include pad(40px null);
+  }
+
 }
 section.blog {
   background-color:$snow;
@@ -571,16 +586,17 @@ footer.site-footer {
     @include span-columns(12);
     li {
       @include pad(30px null);
-      @include media(mobile) {
-          @include span-columns(3 of 12);
-      }
+      @include omega(2n);
+      @include span-columns(6);
 
       @include media($tablet) {
-          @include reset-display;
-          @include span-columns(6 of 12, table);
+          @include omega-reset(2n);
+          @include omega(3n);
+          @include span-columns(4);
       }
       @include media($desktop) {
-          @include span-columns(2, table);
+          @include omega-reset(3n);
+          @include span-columns(2);
       }
       @include pad(30x null);
       color:$white;
@@ -596,4 +612,34 @@ footer.site-footer {
       }
     }
   }
+}
+
+.bottom-single-course {
+  @include pad(50px null);
+  ul {
+    @include outer-container;
+
+    li {
+      @include span-columns(6);
+      @include omega(2n);
+      @include margin(10px null);
+
+      @include media($tablet) {
+        @include span-columns(6);
+      }
+      @include media($desktop) {
+        @include omega-reset(2n);
+        @include omega(3n);
+        @include span-columns(4);
+      }
+
+    }
+  }
+}
+
+.suscribe-course-bottom {
+  @include pad(30px null);
+  text-align:center;
+  @extend .suscribe-course;
+
 }

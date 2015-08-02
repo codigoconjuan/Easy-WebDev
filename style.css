@@ -1714,24 +1714,33 @@ section#tecnologias li {
 
 /* line 265, sass/_easy-webdev.scss */
 div.skills {
-  padding: 30px 0 0 0;
-  height: 300px;
+  padding: 80px 0 0 0;
+  height: 400px;
   width: auto;
   position: relative;
   background-image: url(img/parallax-skills.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  /* line 265, sass/_easy-webdev.scss */
+  div.skills {
+    padding: 90px 0 0 0;
+    height: 400px;
+    width: auto;
+  }
 }
 @media screen and (min-width: 992px) {
   /* line 265, sass/_easy-webdev.scss */
   div.skills {
-    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
     width: auto;
-    padding: 80px 50px 0 50px;
+    padding: 60px 50px 0 50px;
   }
 }
-/* line 278, sass/_easy-webdev.scss */
+/* line 285, sass/_easy-webdev.scss */
 div.skills:after {
   position: absolute;
   height: 100%;
@@ -1744,21 +1753,28 @@ div.skills:after {
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.7) 100%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.7) 100%);
 }
-/* line 288, sass/_easy-webdev.scss */
+/* line 295, sass/_easy-webdev.scss */
 div.skills .container {
   position: relative;
   z-index: 100;
 }
-/* line 294, sass/_easy-webdev.scss */
+/* line 301, sass/_easy-webdev.scss */
 div.skills h2 {
   color: #ffffff;
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: normal;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 768px) {
+  /* line 301, sass/_easy-webdev.scss */
+  div.skills h2 {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
 @media screen and (min-width: 992px) {
-  /* line 294, sass/_easy-webdev.scss */
+  /* line 301, sass/_easy-webdev.scss */
   div.skills h2 {
     float: left;
     display: block;
@@ -1771,17 +1787,17 @@ div.skills h2 {
     margin-right: 0;
   }
 }
-/* line 305, sass/_easy-webdev.scss */
+/* line 316, sass/_easy-webdev.scss */
 div.skills h2:after {
   display: none;
 }
-/* line 308, sass/_easy-webdev.scss */
+/* line 319, sass/_easy-webdev.scss */
 div.skills h2 span {
   border-bottom: 2px solid #d2270b;
   font-weight: bold;
 }
 
-/* line 314, sass/_easy-webdev.scss */
+/* line 325, sass/_easy-webdev.scss */
 .button, section.platform div.view-courses a,
 .button:active,
 section.platform div.view-courses a:active,
@@ -1806,8 +1822,8 @@ section.platform div.view-courses a:visited {
   box-shadow: none !important;
   background-image: linear-gradient(#58b854 0, #58b854 100%) !important;
   clear: both;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 /* line 137, sass/bourbon/_bourbon-deprecated-upcoming.scss */
@@ -1845,20 +1861,29 @@ section.platform div.view-courses a:visited:disabled {
   opacity: 0.5;
 }
 
-/* line 328, sass/_easy-webdev.scss */
+/* line 339, sass/_easy-webdev.scss */
 section.cursos,
 section.blog,
 section.platform,
 div#primary {
-  padding: 40px;
+  padding: 40px 10px;
+}
+@media screen and (min-width: 768px) {
+  /* line 339, sass/_easy-webdev.scss */
+  section.cursos,
+  section.blog,
+  section.platform,
+  div#primary {
+    padding: 40px;
+  }
 }
 
-/* line 334, sass/_easy-webdev.scss */
+/* line 349, sass/_easy-webdev.scss */
 section.blog {
   background-color: #ededed;
 }
 
-/* line 339, sass/_easy-webdev.scss */
+/* line 354, sass/_easy-webdev.scss */
 ul.list li {
   background-color: #ffffff;
   margin-bottom: 30px;
@@ -1867,7 +1892,7 @@ ul.list li {
   box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.28);
 }
 @media screen and (min-width: 768px) {
-  /* line 339, sass/_easy-webdev.scss */
+  /* line 354, sass/_easy-webdev.scss */
   ul.list li {
     float: left;
     display: block;
@@ -1887,11 +1912,11 @@ ul.list li {
     clear: left;
   }
 }
-/* line 350, sass/_easy-webdev.scss */
+/* line 365, sass/_easy-webdev.scss */
 ul.list li a {
   color: #000000 !important;
 }
-/* line 353, sass/_easy-webdev.scss */
+/* line 368, sass/_easy-webdev.scss */
 ul.list li div.content {
   padding: 20px;
 }
@@ -1901,16 +1926,16 @@ ul.list li div.content::after {
   content: "";
   display: table;
 }
-/* line 356, sass/_easy-webdev.scss */
+/* line 371, sass/_easy-webdev.scss */
 ul.list li div.content p {
   margin: 0;
 }
-/* line 359, sass/_easy-webdev.scss */
+/* line 374, sass/_easy-webdev.scss */
 ul.list li div.content p.autor {
   float: left;
   width: 50%;
 }
-/* line 363, sass/_easy-webdev.scss */
+/* line 378, sass/_easy-webdev.scss */
 ul.list li div.content p.fecha {
   float: right;
   width: 50%;
@@ -1918,7 +1943,7 @@ ul.list li div.content p.fecha {
 }
 
 @media screen and (min-width: 768px) {
-  /* line 374, sass/_easy-webdev.scss */
+  /* line 389, sass/_easy-webdev.scss */
   section.platform div.image-platform {
     float: left;
     display: block;
@@ -1931,7 +1956,7 @@ ul.list li div.content p.fecha {
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 381, sass/_easy-webdev.scss */
+  /* line 396, sass/_easy-webdev.scss */
   section.platform div.platform-description {
     float: left;
     display: block;
@@ -1944,13 +1969,13 @@ ul.list li div.content p.fecha {
     margin-right: 0;
   }
 }
-/* line 387, sass/_easy-webdev.scss */
+/* line 402, sass/_easy-webdev.scss */
 section.platform div.platform-description p {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 40px;
 }
-/* line 393, sass/_easy-webdev.scss */
+/* line 408, sass/_easy-webdev.scss */
 section.platform div.view-courses {
   float: left;
   display: block;
@@ -1969,26 +1994,26 @@ section.platform div.view-courses::after {
   content: "";
   display: table;
 }
-/* line 398, sass/_easy-webdev.scss */
+/* line 413, sass/_easy-webdev.scss */
 section.platform div.view-courses a {
   text-transform: none;
   text-shadow: none;
   background-image: linear-gradient(#c3240a 0, #d2270b 100%) !important;
 }
 
-/* line 408, sass/_easy-webdev.scss */
+/* line 423, sass/_easy-webdev.scss */
 footer.site-footer {
   background-color: #10769e;
   padding: 30px 0 0 0;
 }
-/* line 411, sass/_easy-webdev.scss */
+/* line 426, sass/_easy-webdev.scss */
 footer.site-footer div.course-list,
 footer.site-footer div.blog-list {
   margin: 0 0 20px;
   padding: 0 0 0 40px;
 }
 @media screen and (min-width: 768px) {
-  /* line 411, sass/_easy-webdev.scss */
+  /* line 426, sass/_easy-webdev.scss */
   footer.site-footer div.course-list,
   footer.site-footer div.blog-list {
     float: left;
@@ -2004,32 +2029,32 @@ footer.site-footer div.blog-list {
     margin-right: 0;
   }
 }
-/* line 420, sass/_easy-webdev.scss */
+/* line 435, sass/_easy-webdev.scss */
 footer.site-footer div.course-list h3,
 footer.site-footer div.blog-list h3 {
   text-transform: uppercase;
   color: #ffffff;
   margin: 0 0 20px;
 }
-/* line 425, sass/_easy-webdev.scss */
+/* line 440, sass/_easy-webdev.scss */
 footer.site-footer div.course-list ul li,
 footer.site-footer div.blog-list ul li {
   padding: 0 0 0 20px;
   margin: 0 0 10px;
 }
-/* line 428, sass/_easy-webdev.scss */
+/* line 443, sass/_easy-webdev.scss */
 footer.site-footer div.course-list ul li a,
 footer.site-footer div.blog-list ul li a {
   color: #ffffff;
 }
-/* line 434, sass/_easy-webdev.scss */
+/* line 449, sass/_easy-webdev.scss */
 footer.site-footer .site-info {
   background-color: #0c5a79;
   padding: 10px 0;
   margin-top: 20px;
   text-align: center;
 }
-/* line 440, sass/_easy-webdev.scss */
+/* line 455, sass/_easy-webdev.scss */
 footer.site-footer .site-info p {
   font-size: 18px;
   font-size: 1.125rem;
@@ -2038,24 +2063,24 @@ footer.site-footer .site-info p {
   margin-bottom: 0;
 }
 
-/* line 452, sass/_easy-webdev.scss */
+/* line 467, sass/_easy-webdev.scss */
 .single-cursos div.featured {
   height: 600px;
   width: auto;
   position: relative;
 }
-/* line 456, sass/_easy-webdev.scss */
+/* line 471, sass/_easy-webdev.scss */
 .single-cursos div.featured .content {
   top: 180px;
 }
 @media screen and (min-width: 768px) {
-  /* line 456, sass/_easy-webdev.scss */
+  /* line 471, sass/_easy-webdev.scss */
   .single-cursos div.featured .content {
     top: 150px;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 462, sass/_easy-webdev.scss */
+  /* line 477, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-title {
     float: left;
     display: block;
@@ -2067,20 +2092,20 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 467, sass/_easy-webdev.scss */
+/* line 482, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-title h1 {
   font-size: 38px;
   font-size: 2.375rem;
   text-transform: none;
 }
 @media screen and (min-width: 768px) {
-  /* line 467, sass/_easy-webdev.scss */
+  /* line 482, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-title h1 {
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 476, sass/_easy-webdev.scss */
+  /* line 491, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-description {
     float: left;
     display: block;
@@ -2092,14 +2117,14 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 480, sass/_easy-webdev.scss */
+/* line 495, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description p {
   font-size: 18px;
   font-size: 1.125rem;
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 487, sass/_easy-webdev.scss */
+/* line 502, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price {
   background-color: #10769e;
   display: none;
@@ -2111,7 +2136,7 @@ footer.site-footer .site-info p {
   border-bottom-right-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 487, sass/_easy-webdev.scss */
+  /* line 502, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-description div.price {
     display: block;
     float: left;
@@ -2124,11 +2149,11 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 498, sass/_easy-webdev.scss */
+/* line 513, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price p {
   font-weight: bold;
 }
-/* line 501, sass/_easy-webdev.scss */
+/* line 516, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price span {
   position: absolute;
   top: 50%;
@@ -2149,12 +2174,12 @@ footer.site-footer .site-info p {
   line-height: 90px;
   font-family: "Raleway", arial, helvetica, sans-serif;
 }
-/* line 515, sass/_easy-webdev.scss */
+/* line 530, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price.special-price {
   margin-right: 0;
 }
-/* line 521, sass/_easy-webdev.scss */
-.single-cursos div.featured .course-description .suscribe-course {
+/* line 536, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description .suscribe-course, .single-cursos div.featured .course-description .suscribe-course-bottom {
   background-color: #58b854;
   display: none;
   margin: 60px auto 0;
@@ -2164,8 +2189,8 @@ footer.site-footer .site-info p {
   border-bottom-right-radius: 10px;
 }
 @media screen and (min-width: 768px) {
-  /* line 521, sass/_easy-webdev.scss */
-  .single-cursos div.featured .course-description .suscribe-course {
+  /* line 536, sass/_easy-webdev.scss */
+  .single-cursos div.featured .course-description .suscribe-course, .single-cursos div.featured .course-description .suscribe-course-bottom {
     display: block;
     float: left;
     display: block;
@@ -2174,12 +2199,12 @@ footer.site-footer .site-info p {
     margin-left: 25.89467%;
   }
   /* line 89, sass/neat/grid/_span-columns.scss */
-  .single-cursos div.featured .course-description .suscribe-course:last-child {
+  .single-cursos div.featured .course-description .suscribe-course:last-child, .single-cursos div.featured .course-description .suscribe-course-bottom:last-child {
     margin-right: 0;
   }
 }
-/* line 532, sass/_easy-webdev.scss */
-.single-cursos div.featured .course-description .suscribe-course a {
+/* line 547, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description .suscribe-course a, .single-cursos div.featured .course-description .suscribe-course-bottom a {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -2192,12 +2217,12 @@ footer.site-footer .site-info p {
   text-shadow: none;
   background: #58b854;
 }
-/* line 542, sass/_easy-webdev.scss */
-.single-cursos div.featured .course-description .suscribe-course a:hover {
+/* line 557, sass/_easy-webdev.scss */
+.single-cursos div.featured .course-description .suscribe-course a:hover, .single-cursos div.featured .course-description .suscribe-course-bottom a:hover {
   color: #ffffff;
   background: #439940 !important;
 }
-/* line 550, sass/_easy-webdev.scss */
+/* line 565, sass/_easy-webdev.scss */
 .single-cursos div.featured:after {
   position: absolute;
   top: 0;
@@ -2214,17 +2239,17 @@ footer.site-footer .site-info p {
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
 }
-/* line 560, sass/_easy-webdev.scss */
+/* line 575, sass/_easy-webdev.scss */
 .single-cursos div.featured .container {
   position: relative;
   z-index: 100;
 }
 
-/* line 568, sass/_easy-webdev.scss */
+/* line 583, sass/_easy-webdev.scss */
 .course-features {
   background-color: #10769e;
 }
-/* line 570, sass/_easy-webdev.scss */
+/* line 585, sass/_easy-webdev.scss */
 .course-features ul {
   float: left;
   display: block;
@@ -2235,49 +2260,174 @@ footer.site-footer .site-info p {
 .course-features ul:last-child {
   margin-right: 0;
 }
-/* line 572, sass/_easy-webdev.scss */
+/* line 587, sass/_easy-webdev.scss */
 .course-features ul li {
   padding: 30px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
   padding: 30x;
   color: #ffffff;
   text-align: center;
 }
-@media screen and (min-width: mobile) {
-  /* line 572, sass/_easy-webdev.scss */
+/* line 78, sass/neat/grid/_omega.scss */
+.course-features ul li:nth-child(2n) {
+  margin-right: 0;
+}
+/* line 83, sass/neat/grid/_omega.scss */
+.course-features ul li:nth-child(2n+1) {
+  clear: left;
+}
+/* line 89, sass/neat/grid/_span-columns.scss */
+.course-features ul li:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 587, sass/_easy-webdev.scss */
   .course-features ul li {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
+    width: 31.76157%;
+  }
+  /* line 8, sass/omega-reset/mixins/_omega-reset.scss */
+  .course-features ul li:nth-child(2n) {
+    margin-right: 2.35765%;
+  }
+  /* line 9, sass/omega-reset/mixins/_omega-reset.scss */
+  .course-features ul li:nth-child(2n+1) {
+    clear: none;
+  }
+  /* line 78, sass/neat/grid/_omega.scss */
+  .course-features ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, sass/neat/grid/_omega.scss */
+  .course-features ul li:nth-child(3n+1) {
+    clear: left;
   }
   /* line 89, sass/neat/grid/_span-columns.scss */
   .course-features ul li:last-child {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 768px) {
-  /* line 572, sass/_easy-webdev.scss */
-  .course-features ul li {
-    display: table-cell;
-    width: 50%;
-  }
-}
 @media screen and (min-width: 992px) {
-  /* line 572, sass/_easy-webdev.scss */
+  /* line 587, sass/_easy-webdev.scss */
   .course-features ul li {
-    display: table-cell;
-    width: 16.66667%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  /* line 8, sass/omega-reset/mixins/_omega-reset.scss */
+  .course-features ul li:nth-child(3n) {
+    margin-right: 2.35765%;
+  }
+  /* line 9, sass/omega-reset/mixins/_omega-reset.scss */
+  .course-features ul li:nth-child(3n+1) {
+    clear: none;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .course-features ul li:last-child {
+    margin-right: 0;
   }
 }
-/* line 589, sass/_easy-webdev.scss */
+/* line 605, sass/_easy-webdev.scss */
 .course-features ul li i {
   font-size: 50px;
   font-size: 3.125rem;
   margin: 0 0 20px;
 }
-/* line 594, sass/_easy-webdev.scss */
+/* line 610, sass/_easy-webdev.scss */
 .course-features ul li p {
   font-weight: bold;
+}
+
+/* line 617, sass/_easy-webdev.scss */
+.bottom-single-course {
+  padding: 50px;
+}
+/* line 619, sass/_easy-webdev.scss */
+.bottom-single-course ul {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, sass/bourbon/addons/_clearfix.scss */
+.bottom-single-course ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 622, sass/_easy-webdev.scss */
+.bottom-single-course ul li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 89, sass/neat/grid/_span-columns.scss */
+.bottom-single-course ul li:last-child {
+  margin-right: 0;
+}
+/* line 78, sass/neat/grid/_omega.scss */
+.bottom-single-course ul li:nth-child(2n) {
+  margin-right: 0;
+}
+/* line 83, sass/neat/grid/_omega.scss */
+.bottom-single-course ul li:nth-child(2n+1) {
+  clear: left;
+}
+@media screen and (min-width: 768px) {
+  /* line 622, sass/_easy-webdev.scss */
+  .bottom-single-course ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .bottom-single-course ul li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 622, sass/_easy-webdev.scss */
+  .bottom-single-course ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 8, sass/omega-reset/mixins/_omega-reset.scss */
+  .bottom-single-course ul li:nth-child(2n) {
+    margin-right: 2.35765%;
+  }
+  /* line 9, sass/omega-reset/mixins/_omega-reset.scss */
+  .bottom-single-course ul li:nth-child(2n+1) {
+    clear: none;
+  }
+  /* line 78, sass/neat/grid/_omega.scss */
+  .bottom-single-course ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, sass/neat/grid/_omega.scss */
+  .bottom-single-course ul li:nth-child(3n+1) {
+    clear: left;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  .bottom-single-course ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 640, sass/_easy-webdev.scss */
+.suscribe-course-bottom {
+  padding: 30px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

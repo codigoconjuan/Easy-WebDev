@@ -512,51 +512,15 @@ function cursos_fields() {
 		'id'         => $prefix . 'cantidad_videos',
 		'type'       => 'text',
 	) );
+    $cmb_cursos->add_field( array(
+        'name'       => __( '¿Qué Aprenderás en este Curso?', 'cmb2' ),
+        'desc'       => __( 'Listado de Temas', 'cmb2' ),
+        'id'         => $prefix . 'listado_aprenderas',
+        'type'       => 'text',
+        'repeatable' => true,
+    ) );
 }
 
-add_action( 'cmb2_init', 'curso_fields_repetidor' );
-/**
- * Hook in and add a metabox to demonstrate repeatable grouped fields
- */
-function curso_fields_repetidor() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_cursos_repetidor_';
-
-	/**
-	 * Repeatable Field Groups
-	 */
-	$cursos_repetidor = new_cmb2_box( array(
-		'id'           => $prefix . 'metabox',
-		'title'        => __( 'Campos para lo que se aprenderá en este curso.', 'cmb2' ),
-		'object_types' => array( 'cursos', ),
-	) );
-	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
-	$repetidor = $cursos_repetidor->add_field( array(
-		'id'          => $prefix . 'demo',
-		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'cmb2' ),
-		'options'     => array(
-			'group_title'   => __( 'Entry {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Entry', 'cmb2' ),
-			'remove_button' => __( 'Remove Entry', 'cmb2' ),
-			'sortable'      => true, // beta
-		),
-	) );
-
-	/**
-	 * Group fields works the same, except ids only need
-	 * to be unique to the group. Prefix is not needed.
-	 *
-	 * The parent field's id needs to be passed as the first argument.
-	 */
-	$cursos_repetidor->add_group_field( $repetidor, array(
-		'name'       => __( 'Entry Title', 'cmb2' ),
-		'id'         => 'title',
-		'type'       => 'textarea',
-		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
-	) );
-}
 
 add_action( 'cmb2_init', 'blog_fields' );
 /**
