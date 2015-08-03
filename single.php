@@ -33,4 +33,20 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+  <div class="bottom-content">
+      <?php $relatedPost =  get_post_meta( get_the_ID(), 'attached_cmb2_attached_posts', true ); ?>
+
+
+    <?php $args = array(
+        'post__in' => $relatedPost,
+        'post_type' => array('post','cursos')
+    ); ?>
+    <?php $related = new WP_Query($args); ?>
+
+    <?php while($related->have_posts() ): $related->the_post(); ?>
+        <?php the_title(); ?>
+    <?php endwhile; wp_reset_postdata();   ?>
+
+  </div>
+
 <?php get_footer(); ?>
