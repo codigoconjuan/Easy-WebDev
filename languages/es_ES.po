@@ -1,0 +1,580 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2015-07-16 16:57-0500\n"
+"PO-Revision-Date: 2015-07-16 16:57-0500\n"
+"Last-Translator: Juan Pablo De la torre\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# @ _s
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Esa página no existe"
+
+# @ _s
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "No hubo resultados. ¿Tal vez intentando con otra búsqueda?"
+
+# @ _s
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Categorías más utilizadas"
+
+# @ _s
+#. translators: %1$s: smiley
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Intenta revisando los archivos mensuales. %1$s"
+
+# @ _s
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un comentario en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios en  &ldquo;%2$s&rdquo;"
+
+# @ _s
+#: comments.php:38 comments.php:59
+msgid "Comment navigation"
+msgstr "Navegación de Comentarios"
+
+# @ _s
+#: comments.php:41 comments.php:62
+msgid "Older Comments"
+msgstr "Comentarios Anteriores"
+
+# @ _s
+#: comments.php:42 comments.php:63
+msgid "Newer Comments"
+msgstr "Nuevos Comentarios"
+
+# @ _s
+#: comments.php:75
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados"
+
+# @ _s
+#: footer.php:16
+msgid "http://wordpress.org/"
+msgstr ""
+
+# @ _s
+#: footer.php:16
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Orgullosamente desarrollado con %s"
+
+# @ _s
+#: footer.php:18
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+# @ _s
+#: functions.php:45 header.php:32
+msgid "Primary Menu"
+msgstr "Menú Principal"
+
+# @ _s
+#: functions.php:100
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+# @ _s
+#: header.php:23
+msgid "Skip to content"
+msgstr "Ir al contenido"
+
+# @ _s
+#: inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+# @ _s
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Menú de Entradas"
+
+# @ _s
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr "Entradas Anteriores"
+
+# @ _s
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr "Nuevas Entradas"
+
+# @ _s
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navegación de Entradas"
+
+# @ _s
+#: inc/template-tags.php:86
+#, php-format
+msgctxt "post date"
+msgid "Written by  %s"
+msgstr "Escrito por %s"
+
+# @ _s
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:108 inc/template-tags.php:114
+msgid ", "
+msgstr ","
+
+# @ _s
+#: inc/template-tags.php:110
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Escrito en %1$s"
+
+# @ _s
+#: inc/template-tags.php:116
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetado %1$s"
+
+# @ _s
+#: inc/template-tags.php:122
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+# @ _s
+#: inc/template-tags.php:122
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+# @ _s
+#: inc/template-tags.php:122
+msgid "% Comments"
+msgstr "% Comentarios"
+
+# @ _s
+#: inc/template-tags.php:126 template-parts/content-page.php:26
+msgid "Edit"
+msgstr "Editar"
+
+# @ _s
+#: inc/template-tags.php:143
+#, php-format
+msgid "Category: %s"
+msgstr "Categorías: %s"
+
+# @ _s
+#: inc/template-tags.php:145
+#, php-format
+msgid "Tag: %s"
+msgstr "Etiqueta: %s"
+
+# @ _s
+#: inc/template-tags.php:147
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+# @ _s
+#: inc/template-tags.php:149
+#, php-format
+msgid "Year: %s"
+msgstr "Año: %s"
+
+# @ _s
+#: inc/template-tags.php:149
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+# @ _s
+#: inc/template-tags.php:151
+#, php-format
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+# @ _s
+#: inc/template-tags.php:151
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+# @ _s
+#: inc/template-tags.php:153
+#, php-format
+msgid "Day: %s"
+msgstr "Día: %s"
+
+# @ _s
+#: inc/template-tags.php:153
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "F j, Y"
+
+# @ _s
+#: inc/template-tags.php:156
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "Lateral"
+
+# @ _s
+#: inc/template-tags.php:158
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "Galería"
+
+# @ _s
+#: inc/template-tags.php:160
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "Imagenes"
+
+# @ _s
+#: inc/template-tags.php:162
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "Videos"
+
+# @ _s
+#: inc/template-tags.php:164
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "Citas"
+
+# @ _s
+#: inc/template-tags.php:166
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "Enlaces"
+
+# @ _s
+#: inc/template-tags.php:168
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "Estados"
+
+# @ _s
+#: inc/template-tags.php:170
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "Audio"
+
+# @ _s
+#: inc/template-tags.php:172
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "Chats"
+
+# @ _s
+#: inc/template-tags.php:175
+#, php-format
+msgid "Archives: %s"
+msgstr "Archivos: %s"
+
+# @ _s
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:179
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+# @ _s
+#: inc/template-tags.php:181
+msgid "Archives"
+msgstr "Archivos"
+
+# @ _s
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados para: %s"
+
+# @ _s
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Sin Resultados"
+
+# @ _s
+#: template-parts/content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"¿Listo para escribir tu primera entrada? <a href=\"%1$s\">Comienza aquí</a>."
+
+# @ _s
+#: template-parts/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, no se encontraron resultados de tu búsqueda. Por favor intenta "
+"con otros términos."
+
+# @ _s
+#: template-parts/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"No hay resultados para tu búsqueda. Tal vez una búsqueda podría ayudar."
+
+# @ _s
+#: template-parts/content-page.php:19 template-parts/content-single.php:23
+#: template-parts/content.php:32
+msgid "Pages:"
+msgstr "Páginas:"
+
+# @ _s
+#. translators: %s: Name of current post
+#: template-parts/content.php:25
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continuar leyendo %s <span class=\"meta-nav\">&rarr;</span>"
+
+# @ _s
+#: inc/titan-options.php:25
+#, php-format
+msgid "Call To Action Colors"
+msgstr "Colores para el Call To Action"
+
+# @ _s
+#: inc/titan-options.php:32
+#, php-format
+msgid "This color changes the background of your call to action"
+msgstr "Este color cambia el fondo del Call To Action"
+
+# @ _s
+#: inc/titan-options.php:56
+#, php-format
+msgid "Header Options"
+msgstr "Opciones del Header"
+
+# @ _s
+#: inc/titan-options.php:63
+#, php-format
+msgid "This color changes the background of your header"
+msgstr "Este color cambia el fondo del Header"
+
+# @ _s
+#: inc/titan-options.php:78
+#, php-format
+msgid "Navigation Background Color"
+msgstr "Color de Fondo de la Navegación"
+
+# @ _s
+#: inc/titan-options.php:81
+#, php-format
+msgid "This color changes the background of your navigation"
+msgstr "Este color cambia el color de fondo de tu navegación"
+
+# @ _s
+#: inc/titan-options.php:90
+#, php-format
+msgid "Hover and Dropdown Color for Navigation"
+msgstr "Color para Hover y Desplegable de la navegación"
+
+# @ _s
+#: inc/titan-options.php:93
+#, php-format
+msgid "This color changes the background of your Hover and Dropdown"
+msgstr "Este color cambia el fondo del Hover y Desplegable en la navegación"
+
+# @ _s
+#, php-format
+msgid "Upload your Logo"
+msgstr "Sube tu logotipo"
+
+# @ _s
+#, php-format
+msgid "Header Image"
+msgstr "Imagen del Header"
+
+# @ _s
+#, php-format
+msgid "Upload an Image"
+msgstr "Subir una Imagen"
+
+# @ _s
+#, php-format
+msgid "Background Options"
+msgstr "Opciones del Background"
+
+# @ _s
+#, php-format
+msgid "Background Pattern Image"
+msgstr "Patrón para el Background"
+
+# @ _s
+#, php-format
+msgid "Pick a Color"
+msgstr "Elige un Color"
+
+# @ _s
+#, php-format
+msgid "Footer and Testimonial (Front) Colors"
+msgstr "Colores para el Footer y Testimoniales (Principal)"
+
+# @ _s
+#, php-format
+msgid "This color changes the background of your footer"
+msgstr "Este color cambia el fondo de tu footer"
+
+# @ _s
+#, php-format
+msgid "Text Color"
+msgstr "Color de Texto"
+
+# @ _s
+#, php-format
+msgid "This color changes the text color of your call to action"
+msgstr "Este color cambia el color de texto del Call To Action"
+
+# @ _s
+#, php-format
+msgid "Dinamarca Settings"
+msgstr "Opciones del Tema"
+
+# @ _s
+#, php-format
+msgid "Call To Action Options"
+msgstr "Configurar Call To Action"
+
+# @ _s
+#, php-format
+msgid "Phone Number"
+msgstr "Número de Teléfono"
+
+# @ _s
+#, php-format
+msgid "Add your Phone number to header."
+msgstr "Agrega tu número de teléfono"
+
+# @ _s
+#, php-format
+msgid "Contact Button Text"
+msgstr "Texto para el botón de Contacto"
+
+# @ _s
+#, php-format
+msgid "Contact Text"
+msgstr "Texto para Contacto"
+
+# @ _s
+#, php-format
+msgid "Contact Button Link"
+msgstr "Enlace para el botón de Contacto"
+
+# @ _s
+#, php-format
+msgid "Contact Link."
+msgstr "Enlace para Contacto"
+
+# @ _s
+#, php-format
+msgid "Front Page"
+msgstr "Página Principal"
+
+# @ _s
+#, php-format
+msgid "Show Slider"
+msgstr "Mostrar Slider "
+
+# @ _s
+#, php-format
+msgid "Show Services"
+msgstr "Mostrar Servicios"
+
+# @ _s
+#, php-format
+msgid "Show Testimonials"
+msgstr "Mostrar Testimoniales"
+
+# @ _s
+#, php-format
+msgid "Show Blog"
+msgstr "Mostrar Blog"
+
+# @ _s
+#, php-format
+msgid "General"
+msgstr "General"
+
+# @ _s
+#, php-format
+msgid "Show Author Bio"
+msgstr "Mostrar Información de Biografía"
+
+# @ _s
+#, php-format
+msgid "Check to True"
+msgstr "Habilitar para Mostrar"
+
+# @ _s
+#, php-format
+msgid "Footer"
+msgstr "Footer"
+
+# @ _s
+#, php-format
+msgid "Copyright Text"
+msgstr "Texto de Derechos de Autor"
+
+# @ _s
+#, php-format
+msgid "Enter your copyright text here"
+msgstr "Coloca tu Texto para Derechos de Autor Aquí"
+
+# @ _s
+#, php-format
+msgid "Testimonials"
+msgstr "Testimoniales"
+
+# @ _s
+#: template-parts/content-single.php:24
+#, php-format
+msgctxt "post author by"
+msgid "Written by"
+msgstr "Escrito por"
+
+# @ _s
+#: template-parts/content-single.php:65
+#, php-format
+msgctxt "author bio"
+msgid "Author Bio"
+msgstr "Biografía del Autor"
+
+# @ _s
+#: inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "por %s"
+
+# @ _s
+#: template-parts/content-single.php:65
+#, php-format
+msgctxt "Post Type General Name"
+msgid "Testimonials"
+msgstr "Testimoniales"
+
+# @ _s
+#: template-parts/content-single.php:65
+#, php-format
+msgctxt "Post Type Singular Name"
+msgid "Testimonials"
+msgstr "Testimoniales"

@@ -45,7 +45,7 @@ h2:after {
 }
 header.site-header .header-wrapper {
     @include media($tablet) {
-      @include pad(20px 0 0 0);
+      @include padding(20px 0 0 0);
     }
 
     .site-branding {
@@ -60,7 +60,7 @@ header.site-header .header-wrapper {
      } //.site-branding
 
     .social-navigation {
-      @include pad(20px 0 0 0 );
+      @include padding(20px 0 0 0 );
       clear:both;
       ul {
         li {
@@ -75,7 +75,7 @@ header.site-header .header-wrapper {
           @include shift(1);
           @include omega();
           clear:none;
-          @include pad(35px 0 0 0 );
+          @include padding(35px 0 0 0 );
       }
     }
 }
@@ -121,12 +121,16 @@ header {
 div.featured {
   position:relative;
   @include size(auto 600px);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
 
   @include media($desktop) {
     @include size(auto 800px);
+    background-size: cover;
+    background-attachment: fixed;
   }
-  background-size: cover;
-  background-attachment: fixed;
+
   div.pattern {
     background-image:url(img/bgpattern.png);
     @include size(100% 100%);
@@ -187,6 +191,7 @@ div.featured.page{
       height:400px;
   }
   h1 {
+    text-shadow: 2px 5px 10px #222;
     font-size: 38px;
     font-size: rem(38);
     color:$white;
@@ -263,7 +268,7 @@ section#tecnologias {
 }
 
 div.skills {
-  @include pad(80px 0 0 0);
+  @include padding(80px 0 0 0);
   @include size(auto 400px);
   position: relative;
   background-image: url(img/parallax-skills.jpg);
@@ -271,7 +276,7 @@ div.skills {
   text-align:center;
 
   @include media($tablet) {
-    @include pad(90px 0 0 0);
+    @include padding(90px 0 0 0);
     @include size(auto 400px);
   }
 
@@ -279,7 +284,7 @@ div.skills {
       background-size: cover;
       background-attachment: fixed;
       @include size(auto 300px);
-      @include pad(60px 50px 0 50px);
+      @include padding(60px 50px 0 50px);
   }
 
   &:after {
@@ -340,9 +345,9 @@ section.cursos,
 section.blog,
 section.platform,
 div#primary {
-  @include pad(40px 10px);
+  @include padding(40px 10px);
   @include media($tablet) {
-    @include pad(40px null);
+    @include padding(40px null);
   }
 
 }
@@ -367,18 +372,22 @@ ul.list {
     }
     div.content {
       @include clearfix;
-      @include pad(20px);
+      @include padding(20px);
       p {
           @include margin(0);
       }
       p.autor {
         float:left;
         width:50%;
+        font-size: 12px;
+        font-size: rem(12);
       }
       p.fecha {
         float:right;
         width:50%;
         text-align:right;
+        font-size: 12px;
+        font-size: rem(12);
       }
 
     }
@@ -408,7 +417,7 @@ section.platform {
   div.view-courses {
     @include span-columns(12);
     @include clearfix;
-    @include pad(30px null null null);
+    @include padding(30px null null null);
     text-align:center;
     a {
         @extend .button;
@@ -422,15 +431,15 @@ section.platform {
 
 footer.site-footer {
   background-color: $blue;
-  @include pad(30px 0 0 0);
+  @include padding(30px 0 0 0);
   div.course-list,
   div.blog-list {
         @include margin(0 0 20px 0);
-        @include pad(0 0 0 40px);
+        @include padding(0 0 0 40px);
         @include media($tablet) {
             @include span-columns(6);
             @include margin(0);
-            @include pad(0);
+            @include padding(0);
         }
         h3 {
           text-transform:uppercase;
@@ -438,7 +447,7 @@ footer.site-footer {
           @include margin(0 0 20px 0);
         }
         ul li {
-          @include pad(0 0 0 20px);
+          @include padding(0 0 0 20px);
           @include margin(0 0 10px 0);
           a {
             color:$white;
@@ -448,7 +457,7 @@ footer.site-footer {
 
   .site-info {
     background-color:darken($blue, 8%);
-    @include pad(10px 0);
+    @include padding(10px 0);
     @include margin(20px null null null);
     text-align:center;
 
@@ -480,6 +489,7 @@ footer.site-footer {
       }
 
       h1 {
+        text-shadow: 2px 4px 14px black;
         font-size: 38px;
         font-size: rem(38);
         text-transform:none;
@@ -507,7 +517,7 @@ footer.site-footer {
             @include span-columns(4 of 8);
           }
           position: relative;
-          @include pad(10px 10px 30px 10px);
+          @include padding(10px 10px 30px 10px);
           @include border-top-radius(5px);
           @include border-bottom-radius(5px);
           p {
@@ -585,7 +595,7 @@ footer.site-footer {
   ul {
     @include span-columns(12);
     li {
-      @include pad(30px null);
+      @include padding(30px null);
       @include omega(2n);
       @include span-columns(6);
 
@@ -598,7 +608,7 @@ footer.site-footer {
           @include omega-reset(3n);
           @include span-columns(2);
       }
-      @include pad(30x null);
+      @include padding(30x null);
       color:$white;
       text-align:center;
 
@@ -615,7 +625,7 @@ footer.site-footer {
 }
 
 .bottom-single-course {
-  @include pad(50px null);
+  @include padding(50px null);
   ul {
     @include outer-container;
 
@@ -632,14 +642,66 @@ footer.site-footer {
         @include omega(3n);
         @include span-columns(4);
       }
-
     }
   }
 }
 
 .suscribe-course-bottom {
-  @include pad(30px null);
+  @include padding(30px null);
   text-align:center;
   @extend .suscribe-course;
+}
 
+#primary code[class*="language-"],
+#primary pre[class*="language-"]{
+  @include media($tablet) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+header.entry-header {
+  @include margin(null null 10px null);
+  a {
+    color: $blue!important;
+    font-weight:bold;
+    &:focus,
+    &:active,
+    &:hover {
+      color: $blue!important;
+      font-weight:bold;
+  }
+}
+  span {
+    font-size: 12px;
+    font-size: rem(12);
+  }
+}
+
+div.archive-header {
+  background-color: $blue;
+  height: 180px;
+}
+div.archive-content {
+  @include padding(30px);
+  h1 {
+    text-align:center;
+    font-size: 32px;
+    font-size: rem(32);
+
+  }
+}
+
+.archive h1.page-title {
+  font-size: 38px;
+  font-size: rem(38);
+  span.vcard {
+    font-size: 38px;
+    font-size: rem(38);
+  }
+}
+
+.archive h1.entry-title {
+  font-size: 30px;
+  font-size: rem(30);
 }

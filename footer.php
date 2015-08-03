@@ -15,22 +15,45 @@
 
 			<div class="container">
 					<div class="course-list">
-					  	<h3>Cursos que pueden Interesarte</h3>
+						<?php $currentlang = get_bloginfo('language');
+								if($currentlang=="en-US") {
+									echo "<h3>Premium Courses That Might Interest You </h3>";
+								} else {
+									echo "	<h3>Cursos que podrían interesarte</h3>";
+								}
+								?>
 							<ul>
-								<li><a href="#">Single Page Design with CSS3</a></li>
-								<li><a href="#">Single Page Design with CSS3</a></li>
-								<li><a href="#">Single Page Design with CSS3</a></li>
-								<li><a href="#">Single Page Design with CSS3</a></li>
+								<?php $args = array(
+					          'post_type' => 'cursos',
+					          'posts_per_page' => -1,
+					          'order' => 'DESC',
+					          'orderby' => 'date',
+					      ); ?>
+								<?php $cursos = new WP_Query($args); ?>
+								<?php while($cursos->have_posts()): $cursos->the_post(); ?>
+									<li><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+								<?php endwhile; wp_reset_postdata(); ?>
 							</ul>
 					</div>
 
 					<div class="blog-list">
-					  	<h3>Entradas más populares</h3>
+						<?php if($currentlang=="en-US") {
+							echo "<h3>Popular From the Blog</h3>";
+						} else {
+							echo "	<h3>Entradas de Nuestro Blog</h3>";
+						}
+						?>
 							<ul>
-								<li><a href="#">Single Page Design with CSS3</a></li>
-								<li><a href="#">Single Page Design with CSS3</a></li>
-								<li><a href="#">Single Page Design with CSS3</a></li>
-								<li><a href="#">Single Page Design with CSS3</a></li>
+								<?php $args = array(
+								    'post_type' => 'post',
+								    'posts_per_page' => 4,
+								    'order' => 'DESC',
+								    'orderby' => 'rand',
+								); ?>
+								<?php $cursos = new WP_Query($args); ?>
+								<?php while($cursos->have_posts()): $cursos->the_post(); ?>
+									<li><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+							  <?php endwhile; wp_reset_postdata(); ?>
 							</ul>
 					</div>
 			</div>

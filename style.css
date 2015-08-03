@@ -1343,7 +1343,7 @@ h2:after {
 @media screen and (min-width: 768px) {
   /* line 46, sass/_easy-webdev.scss */
   header.site-header .header-wrapper {
-    padding: 20px 0 0 0;
+    padding: 20px 0 0;
   }
 }
 /* line 51, sass/_easy-webdev.scss */
@@ -1377,7 +1377,7 @@ header.site-header .header-wrapper .site-branding img {
 }
 /* line 62, sass/_easy-webdev.scss */
 header.site-header .header-wrapper .social-navigation {
-  padding: 20px 0 0 0;
+  padding: 20px 0 0;
   clear: both;
 }
 /* line 66, sass/_easy-webdev.scss */
@@ -1414,7 +1414,7 @@ header.site-header .header-wrapper .social-navigation ul li:last-child {
     margin-left: 8.5298%;
     margin-right: 0;
     clear: none;
-    padding: 35px 0 0 0;
+    padding: 35px 0 0;
   }
   /* line 89, sass/neat/grid/_span-columns.scss */
   header.site-header .header-wrapper .social-navigation:last-child {
@@ -1489,16 +1489,19 @@ div.featured, div.featured.page, .single-cursos div.featured {
   height: 600px;
   width: auto;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center center;
+  background-attachment: scroll;
 }
 @media screen and (min-width: 992px) {
   /* line 121, sass/_easy-webdev.scss */
   div.featured, div.featured.page, .single-cursos div.featured {
     height: 800px;
     width: auto;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
-/* line 130, sass/_easy-webdev.scss */
+/* line 134, sass/_easy-webdev.scss */
 div.featured div.pattern {
   background-image: url(img/bgpattern.png);
   height: 100%;
@@ -1507,7 +1510,7 @@ div.featured div.pattern {
   top: 0;
   left: 0;
 }
-/* line 135, sass/_easy-webdev.scss */
+/* line 139, sass/_easy-webdev.scss */
 div.featured .content {
   height: auto;
   width: 100%;
@@ -1516,14 +1519,14 @@ div.featured .content {
   left: 0;
 }
 @media screen and (min-width: 992px) {
-  /* line 135, sass/_easy-webdev.scss */
+  /* line 139, sass/_easy-webdev.scss */
   div.featured .content {
     position: relative;
     top: 30%;
     left: 0;
   }
 }
-/* line 145, sass/_easy-webdev.scss */
+/* line 149, sass/_easy-webdev.scss */
 div.featured .content .container {
   max-width: 68em;
   margin-left: auto;
@@ -1535,7 +1538,7 @@ div.featured .content .container::after {
   content: "";
   display: table;
 }
-/* line 147, sass/_easy-webdev.scss */
+/* line 151, sass/_easy-webdev.scss */
 div.featured .content .container p {
   font-weight: normal;
   font-size: 20px;
@@ -1544,13 +1547,13 @@ div.featured .content .container p {
   margin: 0;
 }
 @media screen and (min-width: 992px) {
-  /* line 147, sass/_easy-webdev.scss */
+  /* line 151, sass/_easy-webdev.scss */
   div.featured .content .container p {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
-/* line 158, sass/_easy-webdev.scss */
+/* line 162, sass/_easy-webdev.scss */
 div.featured .content .container p span {
   font-size: 20px;
   font-size: 1.25rem;
@@ -1558,13 +1561,13 @@ div.featured .content .container p span {
   text-transform: none;
 }
 @media screen and (min-width: 992px) {
-  /* line 158, sass/_easy-webdev.scss */
+  /* line 162, sass/_easy-webdev.scss */
   div.featured .content .container p span {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
-/* line 169, sass/_easy-webdev.scss */
+/* line 173, sass/_easy-webdev.scss */
 div.featured .content .container span {
   color: #ffffff;
   font-weight: bold;
@@ -1573,7 +1576,7 @@ div.featured .content .container span {
   font-size: 1.875rem;
 }
 @media screen and (min-width: 992px) {
-  /* line 169, sass/_easy-webdev.scss */
+  /* line 173, sass/_easy-webdev.scss */
   div.featured .content .container span {
     font-size: 60px;
     font-size: 3.75rem;
@@ -1581,26 +1584,27 @@ div.featured .content .container span {
 }
 
 @media screen and (min-width: 992px) {
-  /* line 184, sass/_easy-webdev.scss */
+  /* line 188, sass/_easy-webdev.scss */
   div.featured.page, .single-cursos div.featured {
     height: 400px;
   }
 }
-/* line 189, sass/_easy-webdev.scss */
+/* line 193, sass/_easy-webdev.scss */
 div.featured.page h1, .single-cursos div.featured h1 {
+  text-shadow: 2px 5px 10px #222;
   font-size: 38px;
   font-size: 2.375rem;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 197, sass/_easy-webdev.scss */
+/* line 202, sass/_easy-webdev.scss */
 div.featured.page p, .single-cursos div.featured p {
   text-align: center;
 }
 
 /* code for animated blinking cursor */
-/* line 203, sass/_easy-webdev.scss */
+/* line 208, sass/_easy-webdev.scss */
 .typed-cursor {
   opacity: 1;
   font-weight: 100;
@@ -1644,11 +1648,11 @@ div.featured.page p, .single-cursos div.featured p {
     opacity: 0;
   }
 }
-/* line 226, sass/_easy-webdev.scss */
+/* line 231, sass/_easy-webdev.scss */
 #social-menu li a {
   font-size: 0;
 }
-/* line 229, sass/_easy-webdev.scss */
+/* line 234, sass/_easy-webdev.scss */
 #social-menu li a:before {
   display: inline-block;
   vertical-align: top;
@@ -1664,24 +1668,24 @@ div.featured.page p, .single-cursos div.featured p {
   border-radius: 5px;
   text-align: center;
 }
-/* line 244, sass/_easy-webdev.scss */
+/* line 249, sass/_easy-webdev.scss */
 #social-menu li a[href*="facebook.com"]::before {
   content: '\f09a';
 }
-/* line 246, sass/_easy-webdev.scss */
+/* line 251, sass/_easy-webdev.scss */
 #social-menu li a[href*="instagram.com"]::before {
   content: '\f16d';
 }
-/* line 248, sass/_easy-webdev.scss */
+/* line 253, sass/_easy-webdev.scss */
 #social-menu li a[href*="youtube.com"]::before {
   content: '\f167';
 }
-/* line 250, sass/_easy-webdev.scss */
+/* line 255, sass/_easy-webdev.scss */
 #social-menu li a[href*="twitter.com"]::before {
   content: '\f099';
 }
 
-/* line 254, sass/_easy-webdev.scss */
+/* line 259, sass/_easy-webdev.scss */
 section#tecnologias {
   max-width: 68em;
   margin-left: auto;
@@ -1694,12 +1698,12 @@ section#tecnologias::after {
   content: "";
   display: table;
 }
-/* line 257, sass/_easy-webdev.scss */
+/* line 262, sass/_easy-webdev.scss */
 section#tecnologias li {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 257, sass/_easy-webdev.scss */
+  /* line 262, sass/_easy-webdev.scss */
   section#tecnologias li {
     float: left;
     display: block;
@@ -1712,9 +1716,9 @@ section#tecnologias li {
   }
 }
 
-/* line 265, sass/_easy-webdev.scss */
+/* line 270, sass/_easy-webdev.scss */
 div.skills {
-  padding: 80px 0 0 0;
+  padding: 80px 0 0;
   height: 400px;
   width: auto;
   position: relative;
@@ -1723,24 +1727,24 @@ div.skills {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 265, sass/_easy-webdev.scss */
+  /* line 270, sass/_easy-webdev.scss */
   div.skills {
-    padding: 90px 0 0 0;
+    padding: 90px 0 0;
     height: 400px;
     width: auto;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 265, sass/_easy-webdev.scss */
+  /* line 270, sass/_easy-webdev.scss */
   div.skills {
     background-size: cover;
     background-attachment: fixed;
     height: 300px;
     width: auto;
-    padding: 60px 50px 0 50px;
+    padding: 60px 50px 0;
   }
 }
-/* line 285, sass/_easy-webdev.scss */
+/* line 290, sass/_easy-webdev.scss */
 div.skills:after {
   position: absolute;
   height: 100%;
@@ -1753,12 +1757,12 @@ div.skills:after {
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.7) 100%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.7) 100%);
 }
-/* line 295, sass/_easy-webdev.scss */
+/* line 300, sass/_easy-webdev.scss */
 div.skills .container {
   position: relative;
   z-index: 100;
 }
-/* line 301, sass/_easy-webdev.scss */
+/* line 306, sass/_easy-webdev.scss */
 div.skills h2 {
   color: #ffffff;
   font-size: 30px;
@@ -1767,14 +1771,14 @@ div.skills h2 {
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
-  /* line 301, sass/_easy-webdev.scss */
+  /* line 306, sass/_easy-webdev.scss */
   div.skills h2 {
     font-size: 40px;
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 301, sass/_easy-webdev.scss */
+  /* line 306, sass/_easy-webdev.scss */
   div.skills h2 {
     float: left;
     display: block;
@@ -1787,17 +1791,17 @@ div.skills h2 {
     margin-right: 0;
   }
 }
-/* line 316, sass/_easy-webdev.scss */
+/* line 321, sass/_easy-webdev.scss */
 div.skills h2:after {
   display: none;
 }
-/* line 319, sass/_easy-webdev.scss */
+/* line 324, sass/_easy-webdev.scss */
 div.skills h2 span {
   border-bottom: 2px solid #d2270b;
   font-weight: bold;
 }
 
-/* line 325, sass/_easy-webdev.scss */
+/* line 330, sass/_easy-webdev.scss */
 .button, section.platform div.view-courses a,
 .button:active,
 section.platform div.view-courses a:active,
@@ -1861,7 +1865,7 @@ section.platform div.view-courses a:visited:disabled {
   opacity: 0.5;
 }
 
-/* line 339, sass/_easy-webdev.scss */
+/* line 344, sass/_easy-webdev.scss */
 section.cursos,
 section.blog,
 section.platform,
@@ -1869,21 +1873,22 @@ div#primary {
   padding: 40px 10px;
 }
 @media screen and (min-width: 768px) {
-  /* line 339, sass/_easy-webdev.scss */
+  /* line 344, sass/_easy-webdev.scss */
   section.cursos,
   section.blog,
   section.platform,
   div#primary {
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
-/* line 349, sass/_easy-webdev.scss */
+/* line 354, sass/_easy-webdev.scss */
 section.blog {
   background-color: #ededed;
 }
 
-/* line 354, sass/_easy-webdev.scss */
+/* line 359, sass/_easy-webdev.scss */
 ul.list li {
   background-color: #ffffff;
   margin-bottom: 30px;
@@ -1892,7 +1897,7 @@ ul.list li {
   box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.28);
 }
 @media screen and (min-width: 768px) {
-  /* line 354, sass/_easy-webdev.scss */
+  /* line 359, sass/_easy-webdev.scss */
   ul.list li {
     float: left;
     display: block;
@@ -1912,11 +1917,11 @@ ul.list li {
     clear: left;
   }
 }
-/* line 365, sass/_easy-webdev.scss */
+/* line 370, sass/_easy-webdev.scss */
 ul.list li a {
   color: #000000 !important;
 }
-/* line 368, sass/_easy-webdev.scss */
+/* line 373, sass/_easy-webdev.scss */
 ul.list li div.content {
   padding: 20px;
 }
@@ -1926,24 +1931,28 @@ ul.list li div.content::after {
   content: "";
   display: table;
 }
-/* line 371, sass/_easy-webdev.scss */
+/* line 376, sass/_easy-webdev.scss */
 ul.list li div.content p {
   margin: 0;
 }
-/* line 374, sass/_easy-webdev.scss */
+/* line 379, sass/_easy-webdev.scss */
 ul.list li div.content p.autor {
   float: left;
   width: 50%;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
-/* line 378, sass/_easy-webdev.scss */
+/* line 385, sass/_easy-webdev.scss */
 ul.list li div.content p.fecha {
   float: right;
   width: 50%;
   text-align: right;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 389, sass/_easy-webdev.scss */
+  /* line 398, sass/_easy-webdev.scss */
   section.platform div.image-platform {
     float: left;
     display: block;
@@ -1956,7 +1965,7 @@ ul.list li div.content p.fecha {
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 396, sass/_easy-webdev.scss */
+  /* line 405, sass/_easy-webdev.scss */
   section.platform div.platform-description {
     float: left;
     display: block;
@@ -1969,19 +1978,19 @@ ul.list li div.content p.fecha {
     margin-right: 0;
   }
 }
-/* line 402, sass/_easy-webdev.scss */
+/* line 411, sass/_easy-webdev.scss */
 section.platform div.platform-description p {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 40px;
 }
-/* line 408, sass/_easy-webdev.scss */
+/* line 417, sass/_easy-webdev.scss */
 section.platform div.view-courses {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  padding: 30px;
+  padding-top: 30px;
   text-align: center;
 }
 /* line 89, sass/neat/grid/_span-columns.scss */
@@ -1994,26 +2003,26 @@ section.platform div.view-courses::after {
   content: "";
   display: table;
 }
-/* line 413, sass/_easy-webdev.scss */
+/* line 422, sass/_easy-webdev.scss */
 section.platform div.view-courses a {
   text-transform: none;
   text-shadow: none;
   background-image: linear-gradient(#c3240a 0, #d2270b 100%) !important;
 }
 
-/* line 423, sass/_easy-webdev.scss */
+/* line 432, sass/_easy-webdev.scss */
 footer.site-footer {
   background-color: #10769e;
-  padding: 30px 0 0 0;
+  padding: 30px 0 0;
 }
-/* line 426, sass/_easy-webdev.scss */
+/* line 435, sass/_easy-webdev.scss */
 footer.site-footer div.course-list,
 footer.site-footer div.blog-list {
   margin: 0 0 20px;
   padding: 0 0 0 40px;
 }
 @media screen and (min-width: 768px) {
-  /* line 426, sass/_easy-webdev.scss */
+  /* line 435, sass/_easy-webdev.scss */
   footer.site-footer div.course-list,
   footer.site-footer div.blog-list {
     float: left;
@@ -2029,32 +2038,32 @@ footer.site-footer div.blog-list {
     margin-right: 0;
   }
 }
-/* line 435, sass/_easy-webdev.scss */
+/* line 444, sass/_easy-webdev.scss */
 footer.site-footer div.course-list h3,
 footer.site-footer div.blog-list h3 {
   text-transform: uppercase;
   color: #ffffff;
   margin: 0 0 20px;
 }
-/* line 440, sass/_easy-webdev.scss */
+/* line 449, sass/_easy-webdev.scss */
 footer.site-footer div.course-list ul li,
 footer.site-footer div.blog-list ul li {
   padding: 0 0 0 20px;
   margin: 0 0 10px;
 }
-/* line 443, sass/_easy-webdev.scss */
+/* line 452, sass/_easy-webdev.scss */
 footer.site-footer div.course-list ul li a,
 footer.site-footer div.blog-list ul li a {
   color: #ffffff;
 }
-/* line 449, sass/_easy-webdev.scss */
+/* line 458, sass/_easy-webdev.scss */
 footer.site-footer .site-info {
   background-color: #0c5a79;
   padding: 10px 0;
   margin-top: 20px;
   text-align: center;
 }
-/* line 455, sass/_easy-webdev.scss */
+/* line 464, sass/_easy-webdev.scss */
 footer.site-footer .site-info p {
   font-size: 18px;
   font-size: 1.125rem;
@@ -2063,24 +2072,24 @@ footer.site-footer .site-info p {
   margin-bottom: 0;
 }
 
-/* line 467, sass/_easy-webdev.scss */
+/* line 476, sass/_easy-webdev.scss */
 .single-cursos div.featured {
   height: 600px;
   width: auto;
   position: relative;
 }
-/* line 471, sass/_easy-webdev.scss */
+/* line 480, sass/_easy-webdev.scss */
 .single-cursos div.featured .content {
   top: 180px;
 }
 @media screen and (min-width: 768px) {
-  /* line 471, sass/_easy-webdev.scss */
+  /* line 480, sass/_easy-webdev.scss */
   .single-cursos div.featured .content {
     top: 150px;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 477, sass/_easy-webdev.scss */
+  /* line 486, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-title {
     float: left;
     display: block;
@@ -2092,20 +2101,21 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 482, sass/_easy-webdev.scss */
+/* line 491, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-title h1 {
+  text-shadow: 2px 4px 14px black;
   font-size: 38px;
   font-size: 2.375rem;
   text-transform: none;
 }
 @media screen and (min-width: 768px) {
-  /* line 482, sass/_easy-webdev.scss */
+  /* line 491, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-title h1 {
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 491, sass/_easy-webdev.scss */
+  /* line 501, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-description {
     float: left;
     display: block;
@@ -2117,26 +2127,26 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 495, sass/_easy-webdev.scss */
+/* line 505, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description p {
   font-size: 18px;
   font-size: 1.125rem;
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 502, sass/_easy-webdev.scss */
+/* line 512, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price {
   background-color: #10769e;
   display: none;
   position: relative;
-  padding: 10px 10px 30px 10px;
+  padding: 10px 10px 30px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 502, sass/_easy-webdev.scss */
+  /* line 512, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-description div.price {
     display: block;
     float: left;
@@ -2149,11 +2159,11 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 513, sass/_easy-webdev.scss */
+/* line 523, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price p {
   font-weight: bold;
 }
-/* line 516, sass/_easy-webdev.scss */
+/* line 526, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price span {
   position: absolute;
   top: 50%;
@@ -2174,11 +2184,11 @@ footer.site-footer .site-info p {
   line-height: 90px;
   font-family: "Raleway", arial, helvetica, sans-serif;
 }
-/* line 530, sass/_easy-webdev.scss */
+/* line 540, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description div.price.special-price {
   margin-right: 0;
 }
-/* line 536, sass/_easy-webdev.scss */
+/* line 546, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description .suscribe-course, .single-cursos div.featured .course-description .suscribe-course-bottom {
   background-color: #58b854;
   display: none;
@@ -2189,7 +2199,7 @@ footer.site-footer .site-info p {
   border-bottom-right-radius: 10px;
 }
 @media screen and (min-width: 768px) {
-  /* line 536, sass/_easy-webdev.scss */
+  /* line 546, sass/_easy-webdev.scss */
   .single-cursos div.featured .course-description .suscribe-course, .single-cursos div.featured .course-description .suscribe-course-bottom {
     display: block;
     float: left;
@@ -2203,7 +2213,7 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 547, sass/_easy-webdev.scss */
+/* line 557, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description .suscribe-course a, .single-cursos div.featured .course-description .suscribe-course-bottom a {
   display: block;
   margin: 0 auto;
@@ -2217,12 +2227,12 @@ footer.site-footer .site-info p {
   text-shadow: none;
   background: #58b854;
 }
-/* line 557, sass/_easy-webdev.scss */
+/* line 567, sass/_easy-webdev.scss */
 .single-cursos div.featured .course-description .suscribe-course a:hover, .single-cursos div.featured .course-description .suscribe-course-bottom a:hover {
   color: #ffffff;
   background: #439940 !important;
 }
-/* line 565, sass/_easy-webdev.scss */
+/* line 575, sass/_easy-webdev.scss */
 .single-cursos div.featured:after {
   position: absolute;
   top: 0;
@@ -2239,17 +2249,17 @@ footer.site-footer .site-info p {
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
 }
-/* line 575, sass/_easy-webdev.scss */
+/* line 585, sass/_easy-webdev.scss */
 .single-cursos div.featured .container {
   position: relative;
   z-index: 100;
 }
 
-/* line 583, sass/_easy-webdev.scss */
+/* line 593, sass/_easy-webdev.scss */
 .course-features {
   background-color: #10769e;
 }
-/* line 585, sass/_easy-webdev.scss */
+/* line 595, sass/_easy-webdev.scss */
 .course-features ul {
   float: left;
   display: block;
@@ -2260,14 +2270,16 @@ footer.site-footer .site-info p {
 .course-features ul:last-child {
   margin-right: 0;
 }
-/* line 587, sass/_easy-webdev.scss */
+/* line 597, sass/_easy-webdev.scss */
 .course-features ul li {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  padding: 30x;
+  padding-top: 30x;
+  padding-bottom: 30x;
   color: #ffffff;
   text-align: center;
 }
@@ -2284,7 +2296,7 @@ footer.site-footer .site-info p {
   margin-right: 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 587, sass/_easy-webdev.scss */
+  /* line 597, sass/_easy-webdev.scss */
   .course-features ul li {
     float: left;
     display: block;
@@ -2313,7 +2325,7 @@ footer.site-footer .site-info p {
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 587, sass/_easy-webdev.scss */
+  /* line 597, sass/_easy-webdev.scss */
   .course-features ul li {
     float: left;
     display: block;
@@ -2333,22 +2345,23 @@ footer.site-footer .site-info p {
     margin-right: 0;
   }
 }
-/* line 605, sass/_easy-webdev.scss */
+/* line 615, sass/_easy-webdev.scss */
 .course-features ul li i {
   font-size: 50px;
   font-size: 3.125rem;
   margin: 0 0 20px;
 }
-/* line 610, sass/_easy-webdev.scss */
+/* line 620, sass/_easy-webdev.scss */
 .course-features ul li p {
   font-weight: bold;
 }
 
-/* line 617, sass/_easy-webdev.scss */
+/* line 627, sass/_easy-webdev.scss */
 .bottom-single-course {
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 619, sass/_easy-webdev.scss */
+/* line 629, sass/_easy-webdev.scss */
 .bottom-single-course ul {
   max-width: 68em;
   margin-left: auto;
@@ -2360,7 +2373,7 @@ footer.site-footer .site-info p {
   content: "";
   display: table;
 }
-/* line 622, sass/_easy-webdev.scss */
+/* line 632, sass/_easy-webdev.scss */
 .bottom-single-course ul li {
   float: left;
   display: block;
@@ -2382,7 +2395,7 @@ footer.site-footer .site-info p {
   clear: left;
 }
 @media screen and (min-width: 768px) {
-  /* line 622, sass/_easy-webdev.scss */
+  /* line 632, sass/_easy-webdev.scss */
   .bottom-single-course ul li {
     float: left;
     display: block;
@@ -2395,7 +2408,7 @@ footer.site-footer .site-info p {
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 622, sass/_easy-webdev.scss */
+  /* line 632, sass/_easy-webdev.scss */
   .bottom-single-course ul li {
     float: left;
     display: block;
@@ -2424,10 +2437,82 @@ footer.site-footer .site-info p {
   }
 }
 
-/* line 640, sass/_easy-webdev.scss */
+/* line 649, sass/_easy-webdev.scss */
 .suscribe-course-bottom {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 655, sass/_easy-webdev.scss */
+  #primary code[class*="language-"],
+  #primary pre[class*="language-"] {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+  }
+  /* line 89, sass/neat/grid/_span-columns.scss */
+  #primary code[class*="language-"]:last-child,
+  #primary pre[class*="language-"]:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 663, sass/_easy-webdev.scss */
+header.entry-header {
+  margin-bottom: 10px;
+}
+/* line 665, sass/_easy-webdev.scss */
+header.entry-header a {
+  color: #10769e !important;
+  font-weight: bold;
+}
+/* line 668, sass/_easy-webdev.scss */
+header.entry-header a:focus, header.entry-header a:active, header.entry-header a:hover {
+  color: #10769e !important;
+  font-weight: bold;
+}
+/* line 675, sass/_easy-webdev.scss */
+header.entry-header span {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* line 681, sass/_easy-webdev.scss */
+div.archive-header {
+  background-color: #10769e;
+  height: 180px;
+}
+
+/* line 685, sass/_easy-webdev.scss */
+div.archive-content {
+  padding: 30px;
+}
+/* line 687, sass/_easy-webdev.scss */
+div.archive-content h1 {
+  text-align: center;
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+/* line 695, sass/_easy-webdev.scss */
+.archive h1.page-title {
+  font-size: 38px;
+  font-size: 2.375rem;
+}
+/* line 698, sass/_easy-webdev.scss */
+.archive h1.page-title span.vcard {
+  font-size: 38px;
+  font-size: 2.375rem;
+}
+
+/* line 704, sass/_easy-webdev.scss */
+.archive h1.entry-title {
+  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 /*--------------------------------------------------------------

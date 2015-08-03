@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Blog Español
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -27,8 +27,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
+      <?php $titulo =  get_post_meta( get_the_ID(), '_descripciones_first_title', true ); ?>
+      <?php if(!empty($titulo)) { ?>
+        <h2><?php echo $titulo; ?></h2>
+      <?php  } ?>
 
-    <h2><?php echo get_post_meta( get_the_ID(), '_descripciones_first_title', true ); ?></h2>
+    <?php // aqui se cargan los post del blog del homepage y blog ?>
+    <?php get_template_part('template-parts/content-blog'); ?>
 
 
 		</main><!-- #main -->

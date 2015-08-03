@@ -7,27 +7,31 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class('container'); ?>>
+
+	<header class="entry-header">
 		<div class="entry-meta">
-			<?php easy_webdev_posted_on(); ?>
+			<?php $currentlang = get_bloginfo('language');
+					if($currentlang=="en-US") {
+						easy_webdev_posted_on();
+					} else {
+						easy_webdev_posted_on_esp();
+					}
+			?>
+			<?php  ?>
 		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+		<div class="tag-meta">
+			<?php easy_webdev_entry_footer(); ?>
+		</div>
+	</header><!-- .entry-footer -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'easy-webdev' ),
-				'after'  => '</div>',
-			) );
-		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php easy_webdev_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
 
+
+
+
+</article><!-- #post-## -->

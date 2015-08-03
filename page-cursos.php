@@ -30,38 +30,8 @@ get_header(); ?>
 
       <h2><?php echo get_post_meta( get_the_ID(), '_descripciones_first_title', true ); ?></h2>
 
-
-      <?php $args = array(
-          'post_type' => 'cursos',
-          'posts_per_page' => -1,
-          'order' => 'DESC',
-          'orderby' => 'date',
-          'tax_query' => array(
-        		array(
-        			'taxonomy' => 'idioma',
-        			'field'    => 'slug',
-        			'terms'    => 'espanol',
-        		),
-        	),
-      ); ?>
-
-        <ul class="list">
-        <?php $cursos = new WP_Query($args); ?>
-        <?php while($cursos->have_posts()): $cursos->the_post(); ?>
-          <li>
-              <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail() ?>
-                  <div class="content">
-                      <h3><?php echo get_the_title(); ?></h3>
-                      <p><strong>Nivel: </strong><?php echo get_post_meta( get_the_ID(), '_cursos_nivel_curso', true ); ?></p>
-                      <p><?php echo get_post_meta( get_the_ID(), '_cursos_cantidad_videos', true); ?> Videos</p>
-                      <p><strong>Duración: </strong><?php echo get_post_meta( get_the_ID(), '_cursos_duracion_curso', true ); ?> horas</p>
-                  </div>
-              </a>
-          </li>
-        <?php endwhile; wp_reset_postdata(); ?>
-
-        </ul>
+      <?php // aqui se cargan los cursos ?>
+      <?php get_template_part('template-parts/content-cursos'); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

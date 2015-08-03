@@ -106,15 +106,17 @@ get_header(); ?>
 	</div>
 
     <div class="bottom-single-course">
-        <h2>¿Qué Aprenderás en Este Curso?</h2>
+        <h2>Temas que veremos en este curso</h2>
 
         <?php  $contenido = get_post_meta( get_the_ID(), '_cursos_listado_aprenderas', true ); ?>
-
+				<?php if(!empty($contenido))  {?>
         <ul class="aprenderas">
             <?php foreach($contenido as $c) { ?>
                 <li><?php echo $c ?></li>
             <?php } ?>
         </ul>
+
+				<?php } ?>
 
     </div>
 
