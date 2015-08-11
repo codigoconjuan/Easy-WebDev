@@ -5,5 +5,5 @@ sass_dir = 'sass'
 images_dir = 'img'
 javascripts_dir = "js"
 relative_assets = true
-line_comments = true
-# output_style = :compressed
+line_comments = false
+output_style = :compressed

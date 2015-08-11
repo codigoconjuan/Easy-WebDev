@@ -35,4 +35,18 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+  <section class="platform">
+    <div class="container">
+      <?php $currentlang = get_bloginfo('language');
+            if($currentlang=="en-US") {
+              get_template_part('template-parts/content-platform');
+            } else {
+              get_template_part('template-parts/content-plataforma');
+            }
+            ?>
+    </div>
+</section>
+
+
 <?php get_footer(); ?>

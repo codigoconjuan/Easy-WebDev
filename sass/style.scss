@@ -122,6 +122,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "base/base";
 
 /*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
+@import "font-awesome/font-awesome";
+
+/*--------------------------------------------------------------
 # EasyWebDev
 --------------------------------------------------------------*/
 @import "easy-webdev";
@@ -130,3 +135,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Raleway
 --------------------------------------------------------------*/
 @import "http://fonts.googleapis.com/css?family=Raleway:400,800";
+

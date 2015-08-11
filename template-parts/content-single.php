@@ -30,8 +30,6 @@
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-
-
-
-
 </article><!-- #post-## -->
+
+ 

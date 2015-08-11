@@ -111,8 +111,6 @@ function easy_webdev_scripts() {
 
 	wp_enqueue_script('jquery');
 
-	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
-
 	wp_enqueue_style( 'prism',  get_template_directory_uri() . '/css/prism.css' );
 
 	wp_enqueue_script( 'easy-webdev-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -121,7 +119,7 @@ function easy_webdev_scripts() {
 
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '20120206', true );
 
-  wp_enqueue_script( 'jquerymh', get_template_directory_uri() . '/js/jquery-matchheight.js', array('jquery'), '20120206', true );
+    wp_enqueue_script( 'jquerymh', get_template_directory_uri() . '/js/jquery-matchheight.js', array('jquery'), '20120206', true );
 
 	wp_enqueue_script( 'prism', get_template_directory_uri() . '/js/prism.js', array('jquery'), '20120206', true );
 

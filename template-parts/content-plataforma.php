@@ -5,7 +5,7 @@
 </div>
 
 <div class="platform-description ">
-    <p>Utilizamos la plataforma Udemy para nuestros cursos, así tendrás la garantia que recibiras un curso de calidad, que fue previamente revisado y aprobado, pagarás una vez, y tendrás acceso siempre en cualquier dispositivo (iPhone, iPad, Android), así como un certificado por cumplimiento. ¡Comienza a aprender ya! Además actualizamos y creamos nuevos cursos todo el tiempo.</p>
+    <p>Utilizamos la plataforma UDEMY para nuestros cursos, nuestros cursos son grabados con calidad HD (720p y 1080p) al ser en video podrás presionar pausar, adelantar, retrasar según necesites, además tendrás acceso a preguntarle tus dudas al instructor en el Panel del Curso. Si el curso no es lo que esperabas podrás pedir una devolución siempre y cuando no pasen 30 días.</p>
 </div>
 
 <div class="view-courses">

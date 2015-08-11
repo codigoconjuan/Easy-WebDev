@@ -20,7 +20,7 @@ $blue: #10769e;
 $fuente : 'Raleway', arial, helvetica, sans-serif;
 
 
-h1,h2,h3, span#typed {
+h1,h2,h3, h4,  span#typed {
   font-family: $fuente;
   font-weight:800;
 }
@@ -34,7 +34,7 @@ h2 {
 }
 h2:after {
   @include size(40px 6px);
-  @include margin(10px auto 0 auto);
+  @include margin(3px auto 0 auto);
   display:block;
   content: " ";
   background-color: $orange;
@@ -349,7 +349,12 @@ div#primary {
   @include media($tablet) {
     @include padding(40px null);
   }
+}
 
+div#primary  {
+  @include media($tablet) {
+    @include padding(20px null);
+  }
 }
 section.blog {
   background-color:$snow;
@@ -389,9 +394,24 @@ ul.list {
         font-size: 12px;
         font-size: rem(12);
       }
-
     }
   }
+}
+
+ul.relacionados.shift1 {
+    li:nth-child(1) {
+      @include media($tablet) {
+          @include shift(4);
+      }
+    }
+}
+
+ul.relacionados.shift2 {
+    li:nth-child(1) {
+      @include media($tablet) {
+        @include shift(2);
+      }
+    }
 }
 
 section.platform {
@@ -662,20 +682,20 @@ footer.site-footer {
 
 header.entry-header {
   @include margin(null null 10px null);
-  a {
-    color: $blue!important;
-    font-weight:bold;
-    &:focus,
-    &:active,
-    &:hover {
+    a {
       color: $blue!important;
       font-weight:bold;
-  }
+      &:focus,
+      &:active,
+      &:hover {
+        color: $blue!important;
+        font-weight:bold;
+    }
 }
-  span {
-    font-size: 12px;
-    font-size: rem(12);
-  }
+    span {
+      font-size: 12px;
+      font-size: rem(12);
+    }
 }
 
 div.archive-header {
@@ -688,7 +708,6 @@ div.archive-content {
     text-align:center;
     font-size: 32px;
     font-size: rem(32);
-
   }
 }
 
@@ -704,4 +723,79 @@ div.archive-content {
 .archive h1.entry-title {
   font-size: 30px;
   font-size: rem(30);
+}
+
+header.entry-header {
+ background-color:$snow;
+ @include padding(20px);
+
+ span {
+   font-size: 16px;
+   font-size: rem(16);
+ }
+}
+.entry-content {
+  h2 {
+    font-size: 28px;
+    font-size: rem(28);
+    @include margin(30px 0);
+  }
+  a {
+    color:$blue;
+    font-weight:bold;
+  }
+  a.descargar {
+    @include margin(30px auto 0 auto);
+    @include padding(10px 20px);
+    display: block;
+    text-align: center;
+    color:$white;
+    background-color: $blue;
+    @include media($tablet) {
+        @include size(40% null);
+    }
+  }
+}
+
+
+div.bio-information {
+  background-color:$snow;
+  @include padding(20px);
+
+
+  .bio-img {
+      @include span-columns(3);
+  }
+
+  .biography-info {
+    @include span-columns(9);
+    @include omega();
+  }
+  h3 {
+    font-size: 20px;
+    font-size:rem(20);
+  }
+  h4 {
+    font-size: 18px;
+    font-size: rem(18);
+  }
+
+  .social-links li {
+      display:inline;
+
+      a {
+          font-size: 40px;
+          font-size: rem(40);
+      }
+
+  		a[href*="facebook.com"] {
+          color:#3C599F;
+      }
+      a[href*="twitter.com"] {
+          color:#2AA9E0;
+      }
+      a[href*="linkedin.com"] {
+          color:#0177B5;
+      }
+    }
 }

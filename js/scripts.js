@@ -1,7 +1,7 @@
 jQuery(function($){
 
     $("#typed").typed({
-        strings: ["Responsive Web Design", "HTML5, CSS y JavaScript", "Twitter Bootstrap", "ZURB Foundation", "Wordpress"],
+        strings: ["Responsive Web Design", "HTML5, CSS3 y JavaScript", "Twitter Bootstrap", "ZURB Foundation", "Wordpress"],
         typeSpeed: 40,
         backDelay: 1000,
         loop: true,
@@ -11,7 +11,7 @@ jQuery(function($){
     });
 
     $("#typedEng").typed({
-        strings: ["Responsive Web Design", "HTML5, CSS and JavaScript", "Twitter Bootstrap", "ZURB Foundation", "WordPress"],
+        strings: ["Responsive Web Design", "HTML5, CSS3 and JavaScript", "Twitter Bootstrap", "ZURB Foundation", "WordPress"],
         typeSpeed: 40,
         backDelay: 1000,
         loop: true,
@@ -21,6 +21,9 @@ jQuery(function($){
     });
 
      $("#video-promo").fitVids();
+
+     $(".entry-content").fitVids();
+
 
       $('div#course-features ul li').matchHeight({
           byRow: true,
